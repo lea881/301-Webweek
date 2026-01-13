@@ -1,1 +1,53 @@
-/*CSS*/
+/* HEADER */
+body {
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #ddd;
+}
+
+/* LOGO */
+.logo {
+    height: 50px;
+}
+
+/* MENU */
+.menu {
+    display: flex;
+    gap: 30px;
+}
+
+.menu {
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+}
+
+/* ZONE DROITE */
+.header-droit {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* TELEPHONE */
+.phone {
+    background-color: #2f4f5f;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 20px;
+}
+
+/* BOUTON CONTACT */
+.contact {
+    background-color: #2f4f5f;
+    color: white;
+    padding: 8px 18px;
+    border-radius: 20px;
+}
