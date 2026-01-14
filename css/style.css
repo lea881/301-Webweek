@@ -62,4 +62,98 @@ body {
     border-radius: 20px;
 }
 
+
 /* PAGE HISTOIRE */
+.histoire {
+    width: 90%;
+    margin: auto;
+}
+
+/* Aï-Ki-Do */
+.aikido-mots {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    margin-bottom: 50px;
+    font-family: "korosu";
+}
+
+.aikido-mots h2 {
+    font-size: 90px;
+    margin-bottom: 5px;
+       
+}
+
+.aikido-mots p {
+    font-size: 14px;
+
+}
+
+
+h3 {
+    font-family: 30px;
+    text-align: center;
+    justify-content: space-around;
+}
+.fondateur-contenu {
+    display: flex;
+    gap: 40px;
+}
+
+.fondateur img {
+    width: 250px;
+    height: 250px;
+}
+
+.texte-histoire{
+text-align:justify;
+}
+
+.fondateur{
+text-align:justify;
+}
+
+/* Cartes grades */
+/* Structure grille */
+.grade-grille {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colonnes égales */
+    gap: 30px; /* Espace entre les cartes */
+    padding: 20px;
+    max-width: 1500px;
+}
+
+/* Style Carte */
+.carte {
+    background-color: #f4f4f4;
+    border-radius: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+
+}
+
+.carte:hover {
+    transform: translateY(-5px);
+}
+
+/* En-tête avec l'arrondi */
+.carte-header {
+    background-color: #2f4f5f; 
+    color: #fff; /* Texte Blanc */
+    padding: 40px 20px;
+    border-bottom-left-radius: 50% 30%;
+    border-bottom-right-radius: 50% 30%;
+}
+
+.carte-header h3 {
+    margin: 0;
+    font-size: 20px;
+}
+
+/* Corps de la carte */
+.carte-body {
+    padding: 20px;
+    color: #2f4f5f;
+    
+}
+
