@@ -63,3 +63,48 @@ body {
 }
 
 /* PAGE HISTOIRE */
+.histoire {
+    width: 90%;
+    margin: auto;
+}
+
+/* Aï-Ki-Do */
+.aikido-mots {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.aikido-mots h2 {
+    font-size: 90px;
+    margin-bottom: 5px;
+}
+
+.aikido-mots p {
+    font-size: 14px;
+}
+
+
+h3 {
+    font-size: 25px;
+    text-align: center;
+    justify-content: space-around;
+}
+.fondateur-contenu {
+    display: flex;
+    gap: 40px;
+}
+
+.fondateur img {
+    width: 250px;
+    height: 250px;
+}
+
+.texte-histoire{
+text-align:justify;
+}
+
+.fondateur{
+text-align:justify;
+}
