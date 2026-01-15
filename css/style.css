@@ -1,14 +1,27 @@
 @font-face {
-    font-family: "sigokae";
-    src: url("fonts/sigokae.otf") format("otf");
-    /* HEADER */
+  font-family: "Cabinet";
+  src: url("../fonts/CabinetGrotesk-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
 }
+
+@font-face {
+  font-family: "Clash";
+  src: url("../fonts/ClashDisplay-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 body{
     display:flex;
     align-items: center;
     justify-content: space-around;
     flex-direction: column;
     font-family: Arial, sans-serif;
+}
+
+h1 {
+    font-family: "Cabinet" , sans-serif;
 }
 /*contact*/
 label{
@@ -78,8 +91,20 @@ button {
     border-radius: 20px;
     color: white;
     padding: 8px 16px;
+    color: black;
+  text-decoration: none;
+  padding: 8px 16px;
+  background-image: linear-gradient(#2f4f5f, #2f4f5f);
+  background-size: 0% 3px;
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  transition: background-size 0.3s ease, color 0.3s ease;
 }
 
+.menu a:hover {
+  color: #2f4f5f;
+  background-size: 100% 3px;
+}
 
 /* ZONE DROITE */
 .header-droit {
@@ -102,6 +127,60 @@ button {
     color: white;
     padding: 8px 18px;
     border-radius: 20px;
+}
+
+/* PAGE HISTOIRE */
+
+
+
+
+/*FOOTER*/
+footer {
+  display: flex;
+  align-items: flex-start; 
+  flex-direction: row;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+  gap: 30px; 
+}
+.footer-logo img {
+  width: 60px;
+  display: block;
+}
+
+.footer-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-menu a {
+  text-decoration: none;
+  color: #202020;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+/* --- LE HOVER --- */
+.footer-menu a:hover {
+  color: #2F4F5F;
+}
+
+/* --- LE BLOC DE DROITE --- */
+.footer-droite {
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+}
+
+.footer-address p {
+  margin: 0; 
+  margin-bottom: 15px;
 }
 
 .footer-rs {
@@ -205,10 +284,7 @@ text-align:justify;
     font-weight: bold;
 }
 
-/* Corps de la carte */
-.carte-body {
-    padding: 20px;
-    color: #2f4f5f;
-    
+/* Texte */
+.carte-body p {
+    font-size: 14px;
 }
-
