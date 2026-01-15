@@ -71,6 +71,7 @@ body {
 footer {
   display: flex;
   align-items: flex-start; 
+  flex-direction: row;
   padding: 40px 20px;
   font-family: Arial, sans-serif;
   gap: 30px; 
