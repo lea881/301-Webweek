@@ -29,7 +29,7 @@ $stages = $db->getObjects("SELECT * FROM stage LIMIT 3", 'Stage', []);
         ?>
         
         <!-- Lien pour rediriger vers le stage en détail en fonction de l'id-->
-        <a href="articlestage.php?id=<?php echo $unStage->getId(); ?>">
+        <a href="pages/articlestage.php?id=<?php echo $unStage->getId(); ?>">
             
         <!-- Afficher les stages--> 
             <div class="carte">
