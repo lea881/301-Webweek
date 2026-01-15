@@ -97,6 +97,68 @@ body {
     border-radius: 20px;
 }
 
+/* PAGE HISTOIRE */
+
+
+
+
+/*FOOTER*/
+footer {
+  display: flex;
+  align-items: flex-start; 
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+  gap: 30px; 
+}
+.footer-logo img {
+  width: 60px;
+  display: block;
+}
+
+.footer-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-menu a {
+  text-decoration: none;
+  color: #202020;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+/* --- LE HOVER --- */
+.footer-menu a:hover {
+  color: #2F4F5F;
+}
+
+/* --- LE BLOC DE DROITE --- */
+.footer-droite {
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+}
+
+.footer-address p {
+  margin: 0; 
+  margin-bottom: 15px;
+}
+
+.footer-rs {
+  display: flex;
+  gap: 15px;
+}
+
+.footer-rs img {
+  width: 32px;
+  height: auto;
+}
 
 /* PAGE HISTOIRE */
 .histoire {
