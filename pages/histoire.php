@@ -5,9 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Histoire</title>
       <link rel="stylesheet" type="text/css" href="../css/style.css">
+      <?php
+    include '../includes/header.php';
+    include '../includes/footer.php';
+?>
+
 </head>
 
 <body>
+
     <main class="histoire">
 
     <!-- Aï Ki Do -->
@@ -57,7 +63,7 @@ L’Aïkido se pratique à mains nues, au sabre ou au bâton et se base sur des 
     <div class="grade-grille">
         <div class="carte">
             <div class="carte-header">
-                <h3>6ème Kyu</h3>
+                <h2>6ème Kyu</h2>
             </div>
             <div class="carte-body">
                 <p>Découverte des bases et des mouvements simples, apprendre à tomber et se relever en sécurité.</p>
@@ -66,7 +72,7 @@ L’Aïkido se pratique à mains nues, au sabre ou au bâton et se base sur des 
 
           <div class="carte">
             <div class="carte-header">
-                <h3>5ème Kyu</h3>
+                <h2>5ème Kyu</h2>
             </div>
             <div class="carte-body">
                 <p>Commencer à coordonner ses mouvements avec un partenaire et comprendre le rythme de l’Aïkido.</p>
@@ -75,7 +81,7 @@ L’Aïkido se pratique à mains nues, au sabre ou au bâton et se base sur des 
 
           <div class="carte">
             <div class="carte-header">
-                <h3>4ème Kyu</h3>
+                <h2>4ème Kyu</h2>
             </div>
             <div class="carte-body">
                 <p>Approfondir les techniques de base et commencer à combiner les mouvements entre eux.</p>
@@ -84,7 +90,7 @@ L’Aïkido se pratique à mains nues, au sabre ou au bâton et se base sur des 
 
           <div class="carte">
             <div class="carte-header">
-                <h3>3ème Kyu</h3>
+                <h2>3ème Kyu</h2>
             </div>
             <div class="carte-body">
                 <p>Développer plus de fluidité et de précision dans les techniques, tout en maintenant l’équilibre et le contrôle.</p>
@@ -93,7 +99,7 @@ L’Aïkido se pratique à mains nues, au sabre ou au bâton et se base sur des 
 
           <div class="carte">
             <div class="carte-header">
-                <h3>2ème Kyu</h3>
+                <h2>2ème Kyu</h2>
             </div>
             <div class="carte-body">
                 <p>Commencer à appliquer les techniques plus rapidement et de manière plus naturelle, tout en respectant l’énergie de l’autre.</p>
@@ -102,13 +108,14 @@ L’Aïkido se pratique à mains nues, au sabre ou au bâton et se base sur des 
 
           <div class="carte">
             <div class="carte-header">
-                <h3>1er Kyu</h3>
+                <h2>1er Kyu</h2>
             </div>
             <div class="carte-body">
                 <p>Maîtriser les principales techniques, coordonner parfaitement corps et esprit.</p>
             </div>
         </div>
-
+ </div> 
+    </section> 
 
 </body>
 </html>
