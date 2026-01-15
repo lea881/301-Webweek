@@ -20,7 +20,7 @@
   </div>
 
   <nav class="menu">
-  <a href="../pages/stagecarte.php">Stage</a>
+  <a href="../pages/stagecarte.php2">Stage</a>
   <a href="../pages/cours.php">Cours</a>
   <a href="../pages/association.php">Association</a>
   <a href="../pages/histoire.php">Histoire</a>
