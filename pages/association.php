@@ -55,5 +55,10 @@
         <button class="next" id="nextBtn">&#10095;</button>
 
     </div>
+<footer>
+    <?php
+    include '../includes/footer.php';
+    ?>
+</footer>     
 </body>
 </html>

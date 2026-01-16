@@ -75,8 +75,10 @@ $stages = $db->getObjects("SELECT * FROM stage", 'Stage', []);
 <script src="../js/mustache.min.js"></script>
 <script src="../js/script.js"></script>
     </main> 
+<footer>
+    <?php
+    include '../includes/footer.php';
+    ?>
+</footer>  
 </body>
 </html>
-<?php
-include '../includes/footer.php';
-?>
