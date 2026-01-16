@@ -2,7 +2,7 @@
 include_once '../classes/database.php';
 include_once '../classes/avis.php';
 
-//Verifier que tout les champs du formulaire sont remplis
+//Recuperer l'id de l'avis à supprimer
 if (isset($_POST['idAvisActuel'])){ 
     //Se connecter à la BDD aikido
     $db = database::getInstance('aikido');

@@ -78,47 +78,48 @@ $avis = $db->getObjects("SELECT * FROM avis", 'Avis', []);
                 
                 <?php echo $unAvis->getTitreAvis(). "<br>". $unAvis->getDescriptionAvis();?>
             </div>
-            <form action="api/supprimerAvis.php" method="POST" class="formulaire-avis">
+            <form action="api/supprimerAvis.php" method="POST" class="suppression-avis">
                 <input type="hidden" name="idAvisActuel" value="<?php echo $unAvis->getIdAvis(); ?>">
                 <button type="submit" class="supprimer">Supprimer l'avis</button>
             </form>
-            <form action="api/modifierAvis.php" method="POST" class="formulaire-avis">
+            <form action="pages/modifierAvis.php" method="POST" class="modification-avis">
+                <input type="hidden" name="idAvisActuel" value="<?php echo $unAvis->getIdAvis(); ?>">
                 <button type="submit" class="modifier">Modifier l'avis</button>
-        </form>
+            </form>
         <?php endforeach ?>
-            <section class="section-formulaire-avis">
-    <h2>Laissez-nous votre avis</h2>
-    
-    <form action="api/ajouterAvis.php" method="POST" class="formulaire-avis">
-        <div>
-        <label>Nom :</label>
-        <input type="text" id="nomAvis" name="nomAvis" required placeholder="Jean Dupont">
-        </div>
-        <div>
-        <label>Titre de votre message :</label>
-        <input type="text" id="titreAvis" name="titreAvis" required placeholder="Un super club !">
-        </div>
-        <div>
-        <label>Note :</label>
-        <select id="noteAvis" name="noteAvis" required>
-            <option value="5">5</option>
-            <option value="4">4</option>
-            <option value="3">3</option>
-            <option value="2">2</option>
-            <option value="1">1</option>
-        </select>
-        </div>
-        <div>    
-        <label>Votre commentaire :</label>
-        <textarea id="descriptionAvis" name="descriptionAvis" rows="5" required placeholder="Racontez votre expérience"></textarea>
-        </div>
-
-        <button type="submit" class="publier">Publier mon avis</button>
-    </form>
-</section>
+    <section class="section-formulaire-avis">
+        <h2>Laissez-nous votre avis</h2>
+        
+        <form action="api/ajouterAvis.php" method="POST" class="formulaire-avis">
+            <div>
+                <label>Nom :</label>
+                <input type="text" id="nomAvis" name="nomAvis" required placeholder="Jean Dupont">
+            </div>
+            <div>
+                <label>Titre de votre message :</label>
+                <input type="text" id="titreAvis" name="titreAvis" required placeholder="Un super club !">
+            </div>
+            <div>
+                <label>Note :</label>
+                <select id="noteAvis" name="noteAvis" required>
+                    <option value="5">5</option>
+                    <option value="4">4</option>
+                    <option value="3">3</option>
+                    <option value="2">2</option>
+                    <option value="1">1</option>
+                </select>
+            </div>
+            <div>    
+                <label>Votre commentaire :</label>
+                <textarea id="descriptionAvis" name="descriptionAvis" rows="5" required placeholder="Racontez votre expérience"></textarea>
+            </div>
+            <button type="submit" class="publier">Publier mon avis</button>
+        </form>
+    </section>
                 
-        <script src="js/mustache.min.js"></script>
-        <script src="js/script.js"></script>
+    <script src="js/mustache.min.js"></script>
+    <script src="js/script.js"></script>
+    
     </main> 
 </body>
 </html>
