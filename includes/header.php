@@ -1,18 +1,4 @@
-<?php 
-
-?>
-
-<!--HEADER-->
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <title>Accueil</title>
-  <link rel="stylesheet" type="text/css" href="../css/style.css">
-</head>
-<body>
-
-<header class="header">
+<header>
   <div class="header-droit">
      <a href="index.php">
     <img src="../img/logo.jpg" alt="Logo" class="logo">
