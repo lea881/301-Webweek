@@ -21,11 +21,16 @@
 </p>
 <img src="../img/Thomas_Gavory.png" alt="photo de Thomas Gavory">
 <h1>Galerie</h1>
-<div class="galerie">
+<div class="galerie.photoscouleur">
     <img src="../img/photo_cours.png" alt="photo de cours">
     <img src="../img/photo-prise.png" alt="photo prise aikido">
     <img src="../img/photo-sincline.png" alt="photo de thomas gavory et un de ses élève qui se prosterne">
     <img src="../img/photo-prise-sol.png" alt="photo d'une prise au sol">
+    <img src="../img/photo-prise-tournoi.png" alt ="photo d'une pris d'aikido à un tournoi">
+    <img src="../img/photo-cours-tokyo.png" alt="photo d'un cours à tokyo">
+    <img src="../img/photo_cours-endo-sensei.png" alt="photo avec endo sensei">
+    <img src="../img/photo-groupe_1.png" alt="photo d'un groupe avec Thomas Gavory">
+    <img src="../img/photo-groupe_2.png" alt="photo de groupe avec Thomas Gavory">
 </div>
 </body>
 </html>
