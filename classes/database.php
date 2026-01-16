@@ -1,7 +1,5 @@
-<!-- CLASSE DATABASE -->
-
 <?php
-
+//CLASSE DATABASE
 //J'utilise DIR pour que le chemin fonctionne depuis les fichiers dans le dossier pages mais aussi depuis indes
 include_once __DIR__ . '/../config/connexionBDD.php';
 

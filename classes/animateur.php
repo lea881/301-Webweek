@@ -1,7 +1,5 @@
-<!-- CLASSE ANIMATEUR -->
-
 <?php
-
+//CLASSE ANIMATEUR
 class Animateur{
     private $idAnimateur;
     private $nomAnimateur;

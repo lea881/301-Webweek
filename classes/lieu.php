@@ -1,7 +1,5 @@
-<!-- CLASSE LIEU -->
- 
 <?php
-
+//CLASSE LIEU
 class Lieu {
     private $idLieu;
     private $nomLieu;

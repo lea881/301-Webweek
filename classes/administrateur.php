@@ -1,7 +1,5 @@
-<!-- CLASSE ADMINISTRATEUR -->
- 
 <?php
-
+//CLASSE ADMINISTRATEUR 
 class Administrateur {
     private $idAdmin;
     private $mdpAdmin;

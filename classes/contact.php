@@ -1,7 +1,5 @@
-<!-- CLASSE CONTACT -->
- 
 <?php
-
+//CLASSE CONTACT
 class Contact {
     private $idContact;
     private $nomContact;

@@ -22,6 +22,13 @@ $stages = $db->getObjects("SELECT * FROM stage", 'Stage', []);
 </head>
 <body>
     <main>
+        <div class="search-container">
+            <input type="text" id="inputRecherche" placeholder="Rechercher un stage">
+        </div>
+
+    <div id="resultatsRecherche">
+    </div>
+    <div id="listeCompleteStages">
       <?php foreach ($stages as $unStage) : ?>
         <?php 
             // Récupérer le lieu associé à chacun des stages afficher (avec la classe lieu)
@@ -47,11 +54,27 @@ $stages = $db->getObjects("SELECT * FROM stage", 'Stage', []);
                 }?>
                 </p> 
                 <p> 
-                    <?php echo $lieu->getVille(); ?>, 
+                    <?php echo $lieu->getVille(); ?>
                 </p>
             </div>
         </a>
       <?php endforeach; ?>
+      </div>
+<script id="templateressources" type="text/html">
+    {{#stages}}
+    <a href="articlestage.php?id={{id}}">
+        <div class="carte">
+            <img src="{{image}}" alt="Affiche" />
+            <h3> · {{nom}}</h3>
+            <p>{{date}}</p> 
+            <p>{{ville}}</p>
+        </div>
+    </a>
+    {{/stages}}
+</script>
+
+<script src="../js/mustache.min.js"></script>
+<script src="../js/script.js"></script>
     </main> 
 </body>
 </html>

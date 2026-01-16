@@ -1,7 +1,5 @@
-<!-- CLASSE STAGE -->
- 
 <?php
-
+//CLASSE STAGE
 class Stage{
     private $idStage;
     private $nomStage;
