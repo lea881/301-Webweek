@@ -22,7 +22,29 @@ body{
 
 h1 {
     font-family: "Cabinet" , sans-serif;
+    font-size: 60px;
+    color: #000;
 }
+
+
+h2 {
+    font-family: 'Clash', sans-serif;
+    font-size: 35px;
+    color: #000;
+}
+
+h3 {
+    font-family: 'Cabinet', sans-serif;
+    font-size: 25px;
+    color: #000;
+}
+
+p {
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    color: #000;
+}
+
 /*contact*/
 label{
     text-align: left;
@@ -101,11 +123,6 @@ button {
   transition: background-size 0.3s ease, color 0.3s ease;
 }
 
-.menu a:hover {
-  color: #2f4f5f;
-  background-size: 100% 3px;
-}
-
 /* ZONE DROITE */
 .header-droit {
     display: flex;
@@ -128,11 +145,6 @@ button {
     padding: 8px 18px;
     border-radius: 20px;
 }
-
-/* PAGE HISTOIRE */
-
-
-
 
 /*FOOTER*/
 footer {
@@ -287,4 +299,27 @@ text-align:justify;
 /* Texte */
 .carte-body p {
     font-size: 14px;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+.cartestage{
+    background-color: lightgrey;
+    text-align: left;
+} 
+
+.cartestage h3 {
+    text-align: left;
+    color: black;
+    text-decoration: none;
+}
+
+.cartestage p {
+    color:#000;
+    text-decoration: none;
 }
