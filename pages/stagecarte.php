@@ -1,4 +1,6 @@
 <?php 
+include '../includes/header.php';
+include '../includes/footer.php';
 include_once '../classes/database.php';
 include_once '../classes/stage.php';
 include_once '../classes/lieu.php';
@@ -6,7 +8,7 @@ include_once '../classes/lieu.php';
 //Faire appel à la classe database
 $db = database::getInstance('aikido'); 
 
-// Requete pour récupérer tout les stages et leurs infos
+// Requete pour récupérer tous les stages et leurs infos
 $stages = $db->getObjects("SELECT * FROM stage", 'Stage', []);
 ?>
 
@@ -15,6 +17,7 @@ $stages = $db->getObjects("SELECT * FROM stage", 'Stage', []);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
     <title>Stages</title>
 </head>
 <body>
@@ -32,11 +35,11 @@ $stages = $db->getObjects("SELECT * FROM stage", 'Stage', []);
         <a href="articlestage.php?id=<?php echo $unStage->getId(); ?>">
             
         <!-- Afficher les stages--> 
-            <div class="carte">
+            <div class="cartestage">
                 <img src="<?php echo $unStage->getImage(); ?>" alt="Affiche du stage" />
                 <h3> · <?php echo $unStage->getNom(); ?></h3>
 
-                <?php if ($unStage->getDateDebut()===$unStage->getDateFin()) {?>
+                <p><?php if ($unStage->getDateDebut()===$unStage->getDateFin()) {?>
                     Le <?php echo $unStage->getDateDebut();
                 } 
                 else { ?>

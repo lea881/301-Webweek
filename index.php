@@ -18,9 +18,9 @@ $stages = $db->getObjects("SELECT * FROM stage LIMIT 3", 'Stage', []);
     <title>Accueil</title>
 </head>
 <body>
-     <main>
-      <?php foreach ($stages as $unStage) : ?>
-        <?php 
+    <main>
+    <!--Afficher les 3 premiers stages -->
+        <?php foreach ($stages as $unStage) :
             // Récupérer le lieu associé à chacun des stages afficher (avec la classe lieu)
             $idLieu = $unStage->getIdLieu();
             //Recuperer les infos du lieu en fonction de l'id sur la BDD
@@ -29,7 +29,7 @@ $stages = $db->getObjects("SELECT * FROM stage LIMIT 3", 'Stage', []);
         ?>
         
         <!-- Lien pour rediriger vers le stage en détail en fonction de l'id-->
-        <a href="articlestage.php?id=<?php echo $unStage->getId(); ?>">
+        <a href="pages/articlestage.php?id=<?php echo $unStage->getId(); ?>">
             
         <!-- Afficher les stages--> 
             <div class="carte">
@@ -44,11 +44,34 @@ $stages = $db->getObjects("SELECT * FROM stage LIMIT 3", 'Stage', []);
                 }?>
                 </p> 
                 <p> 
-                    <?php echo $lieu->getVille(); ?>, 
+                    <?php echo $lieu->getVille(); ?>
                 </p>
             </div>
         </a>
-      <?php endforeach; ?>
+        <?php endforeach; ?>
+        <!--Pour afficher les nouveaux stages-->
+        <div id="nouveauxStages"></div>
+                <button id="boutonVoirPlus">Voir plus de stages</button>
+                <!--Afficher les stages en plus grâce à mustache-->
+                <script id="templateressources" type="text/html">
+                    {{#stages}}
+                    <a href="articlestage.php?id={{id}}">
+                        <div class="carte">
+                            <img src="{{image}}" alt="Affiche" />
+                            <h3> · {{nom}}</h3>
+                            <p>
+                                <!--Afficher différement sir le stage dur une seul jour ou plusieurs (pour avoir le meme affichage que sur les autres pages)-->
+                                {{#memeJour}} Le {{debut}} {{/memeJour}}
+                                {{^memeJour}} Du {{debut}} au {{fin}} {{/memeJour}}
+                            </p>
+                            <p>{{ville}}</p>
+                        </div>
+                    </a>
+                    {{/stages}}
+                </script>
+
+        <script src="js/mustache.min.js"></script>
+        <script src="js/script.js"></script>
     </main> 
 </body>
 </html>

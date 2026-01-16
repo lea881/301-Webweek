@@ -1,3 +1,7 @@
+<?php
+include '../includes/header.php';
+include '../includes/footer.php';
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
