@@ -15,6 +15,7 @@ $stages = $db->getObjects("SELECT * FROM stage LIMIT 3", 'Stage', []);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
     <title>Accueil</title>
 </head>
 <body>
@@ -90,5 +91,10 @@ $stages = $db->getObjects("SELECT * FROM stage LIMIT 3", 'Stage', []);
         <button type="button">En svoir plus</button>
         </a>
     </main> 
+    <footer>
+        <?php
+        include '../includes/footer.php';
+        ?>
+    </footer>
 </body>
 </html>
