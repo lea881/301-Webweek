@@ -391,16 +391,47 @@ text-align:justify;
 
 /*Carte stage*/
 
-main {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    margin-top : 20px;
-    margin-bottom: 20px;
-    flex: 1;
+@media (max-width: 768px) {
+    #listeCompleteStages {
+    grid-template-columns: repeat(1, 1fr);
+    }
 }
 
-main a {
+.search-container {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+/* Style du champ de saisie */
+#inputRecherche {
+    width: 100%;
+    max-width: 600px;
+    padding: 12px 20px;
+    font-size: 20px;
+    border: 2px solid #ddd;
+    outline: none;
+}
+
+/* Effet au clic (focus) */
+#inputRecherche:focus {
+    border-color: #2F4F5F;
+}
+
+#inputRecherche::placeholder {
+    color: #aaa;
+    font-style: italic;
+}
+
+#listeCompleteStages {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    width: 100%;
+    margin-top: 40px;
+}
+
+#listeCompleteStages a {
     text-decoration: none;
 }
 .cartestage{
