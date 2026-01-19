@@ -13,9 +13,9 @@
     $path = "../";
      include '../includes/header.php'; 
     ?>
-   <h1>Thomas Gavory</h1>
-   <h2> 6ème DAN</h2>
-   <p> Diplômé d'État</p>
+   <h1 class="titre-assoc">Thomas Gavory</h1>
+   <h2 class="sous-titre-assoc"> 6ème DAN</h2>
+   <p class="paragraphe-assoc"> Diplômé d'État</p>
    
 <div class="Thomas-presentation">
     <p>Thomas Gavory participe à de nombreux événements majeurs, notamment au Festival des Arts  Martiaux de Bercy, où il intervient comme Uke auprès de figures reconnues de l’aïkido : Christian Tissier Shihan (2001, 2003, 2004, 2007), Marc Bachraty Senseï (2011) et Yoko Okamoto Senseï (2012). <br>
@@ -59,11 +59,11 @@
 
     </div>
     <div class="video-aikido">
-        <iframe width="300" height="170" src="https://www.youtube.com/embed/Y8is-ihz_qI?si=C64AoFkzDNRogifY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        <iframe width="300" height="170" src="https://www.youtube.com/embed/Y8is-ihz_qI?si=WYp2VOG539eUcCH5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        <iframe width="300" height="170" src="https://www.youtube.com/embed/-aOPtRwIcXg?si=PFKT952n4CUpYXSX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        <iframe width="300" height="170" src="https://www.youtube.com/embed/GX91U2t4zmI?si=eGrg_0nDaKoo6P4q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        <iframe width="300" height="170" src="https://www.youtube.com/embed/0mJSHEyyKZg?si=1MISYQRsLCXxz2QU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="200" height="170" src="https://www.youtube.com/embed/Y8is-ihz_qI?si=C64AoFkzDNRogifY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="200" height="170" src="https://www.youtube.com/embed/Y8is-ihz_qI?si=WYp2VOG539eUcCH5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="200" height="170" src="https://www.youtube.com/embed/-aOPtRwIcXg?si=PFKT952n4CUpYXSX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="200" height="170" src="https://www.youtube.com/embed/GX91U2t4zmI?si=eGrg_0nDaKoo6P4q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="200" height="170" src="https://www.youtube.com/embed/0mJSHEyyKZg?si=1MISYQRsLCXxz2QU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
     </div>    
 <footer>

@@ -631,6 +631,34 @@ footer {
     color:#000;
 }
 /*Page association*/
+.titre-assoc{
+    margin-top: 0;
+    margin-bottom: 2px;
+    text-align: center;
+}
+.sous-titre-assoc{
+    margin-top: 0;
+    margin-bottom: 2px;
+    text-align: center;
+}
+.paragraphe-assoc{
+    margin-top: 0;
+    text-align: center;
+}
+.Thomas-presentation {
+    width: 80%;
+    text-align: justify;
+    justify-content: center;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+.Thomas-presentation{
+    flex: 1;
+    margin: 0;
+    display: felx;
+    align-items: center;
+}
 .galerie_photoscouleur {
     display: grid;
     grid-template-columns: repeat(3,1fr);
@@ -643,24 +671,16 @@ footer {
     height: 250px;     
     object-fit: cover;  
 }
-.Thomas-presentation {
+.video-aikido {
     display: flex;
-    align-items: stretch;
-    gap: 30px;
-    margin-bottom: 40px;
-    max-width: 900px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
 }
-.Thomas-presentation img{
-    width: 250px;
-    height: auto;
-    object-fit: cover;
-}
-.Thomas-presentation{
-    flex: 1;
-    margin: 0;
-    display: felx;
-    align-items: center;
-}
+
+
 /*PAGE ARTICLE STAGE*/
 
 /* On cible l'image dans la div */
