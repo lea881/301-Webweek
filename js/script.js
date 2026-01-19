@@ -103,18 +103,14 @@ function initCarousel() {
             slides[indexCarousel].classList.remove('active');
             indexCarousel = indexCarousel + direction;
 
-
             if (indexCarousel >= slides.length) indexCarousel = 0;
             if (indexCarousel < 0) indexCarousel = slides.length - 1;
-
 
             slides[indexCarousel].classList.add('active');
         }
 
-
         nextBtn.addEventListener('click', () => changeSlide(1));
         prevBtn.addEventListener('click', () => changeSlide(-1));
-
 
         // Auto-défilement
         setInterval(() => changeSlide(1), 5000);

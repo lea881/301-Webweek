@@ -3,27 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
     <title>Association</title>
-    <?php include '../includes/header.php'; 
-    ?>
 </head>
-
 <body>
-
+    <?php
+    //J'utilise la variable path pour que le chemin s'adapte en fonction de la page (ce ne sont pas les même chemin si on vient de index ou d'une autre page)
+    $path = "../";
+    include '../includes/header.php'; 
+    ?>
    <h1>Thomas Gavory</h1>
    <h2> 6ème DAN</h2>
    <p> Diplômé d'État</p>
-   <p>Thomas Gavory participe à de nombreux événements majeurs, notamment au Festival des Arts  Martiaux de Bercy, où il intervient comme uke auprès de figures reconnues de l’aïkido : Christian Tissier Shihan (2001, 2003, 2004, 2007), Marc Bachraty Senseï (2011) et Yoko Okamoto Senseï (2012). <br>
+   
+<div class="Thomas-presentation">
+    <p>Thomas Gavory participe à de nombreux événements majeurs, notamment au Festival des Arts  Martiaux de Bercy, où il intervient comme Uke auprès de figures reconnues de l’aïkido : Christian Tissier Shihan (2001, 2003, 2004, 2007), Marc Bachraty Senseï (2011) et Yoko Okamoto Senseï (2012). <br>
     En 2012, il se rend au Japon avec la délégation de la FFAAA et assiste Micheline Tissier Senseï lors du 11ᵉ Congrès de la Fédération Internationale d’Aïkido. <br>
     Après avoir enseigné à Noisy-le-Grand de 1994 à 2010 aux côtés de Pierre Helley, Thomas Gavory quitte la région parisienne pour s’installer au Puy-en-Velay. Il y ouvre le Dojo Mugamae, un lieu consacré pendant plusieurs années à la pratique et à la transmission de l’aïkido. Depuis sa fermeture en 2020, les cours se poursuivent au dojo de la halle multisports Célestin Quincieu, à Aiguilhe. <br>
     Aujourd’hui professeur au club d’Aïkido du Puy-en-Velay, il anime régulièrement des stages dans d’autres clubs auvergnats (Saint-Flour, CUC de Clermont-Ferrand…). Depuis 2013, il est également l’assistant d’Alain Royer (7ᵉ dan), directeur technique régional de la Ligue Auvergne, avec qui il coanime les stages de ligue.<br>
     Membre du collège technique national de la FFAAA de 2016 à 2019, Thomas Gavory est aussi formateur BF pour la région Auvergne–Rhône-Alpes.
 </p>
-
-<img src="../img/Thomas_Gavory.png" alt="photo de Thomas Gavory">
-
+</div>
 <h1>Galerie</h1>
-    <div class="galerie.photoscouleur">
+    <div class="galerie_photoscouleur">
         <img src="../img/photo_cours.png" alt="photo de cours">
         <img src="../img/photo-prise.png" alt="photo prise aikido">
         <img src="../img/photo-sincline.png" alt="photo de thomas gavory et un de ses élève qui se prosterne">
@@ -35,9 +37,9 @@
         <img src="../img/photo-groupe_2.png" alt="photo de groupe avec Thomas Gavory">
     </div>
 
-    <div class="carousel.photos">
+    <div class="carousel-photos">
         <div class="carousel-slides">
-            <div class="slide_active">
+            <div class="slide active">
                 <img src="../img/photo-noir-blanc-couteau.png" alt="photo proche d'un combt avec couteau">
             </div>
             <div class="slide">
@@ -55,6 +57,14 @@
         <button class="next" id="nextBtn">&#10095;</button>
 
     </div>
+    <div class="video-aikido">
+        <iframe width="300" height="170" src="https://www.youtube.com/embed/Y8is-ihz_qI?si=C64AoFkzDNRogifY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="300" height="170" src="https://www.youtube.com/embed/Y8is-ihz_qI?si=WYp2VOG539eUcCH5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="300" height="170" src="https://www.youtube.com/embed/-aOPtRwIcXg?si=PFKT952n4CUpYXSX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="300" height="170" src="https://www.youtube.com/embed/GX91U2t4zmI?si=eGrg_0nDaKoo6P4q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="300" height="170" src="https://www.youtube.com/embed/0mJSHEyyKZg?si=1MISYQRsLCXxz2QU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    </div>    
 <footer>
     <?php
     include '../includes/footer.php';
