@@ -79,7 +79,7 @@ $avis = $db->getObjects("SELECT * FROM avis", 'Avis', []);
         </div>
 
         <!--Pour afficher les nouveaux stages-->
-        <div id="nouveauxStages"></div>
+        <div id="nouveauxStages" class="stage-index"></div>
                 <button id="boutonVoirPlus" class="btn">Voir plus de stages</button>
                 <!--Afficher les stages en plus grâce à mustache-->
                 <script id="templateressources" type="text/html" >
@@ -113,12 +113,11 @@ $avis = $db->getObjects("SELECT * FROM avis", 'Avis', []);
         </div>
 
         <h2>Avis</h2>
+        <div class="avis-index">
         <?php foreach ($avis as $unAvis) : ?>
-        <div class="carte"> 
-            <div class="avis">
+        <div class="carte" class="avis"> 
                 <h3><?php echo $unAvis->getNomAvis(). " ". $unAvis->getNoteAvis();?> /5 </h3>
                 <?php echo $unAvis->getTitreAvis(). "<br>". $unAvis->getDescriptionAvis();?>
-            </div>
         
             <form action="api/supprimerAvis.php" method="POST" class="suppression-avis">
                 <input type="hidden" name="idAvisActuel" value="<?php echo $unAvis->getIdAvis(); ?>">
@@ -131,7 +130,7 @@ $avis = $db->getObjects("SELECT * FROM avis", 'Avis', []);
             </form>
         </div>
         <?php endforeach ?>
-
+        </div>
     <section class="section-formulaire-avis">
         <h2>Laissez-nous votre avis</h2>
         <form action="api/ajouterAvis.php" method="POST" class="formulaire-avis">

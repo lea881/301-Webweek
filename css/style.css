@@ -93,7 +93,7 @@ p {
 /*FORMULAIRES CONTACT + MODIFIERAVIS + CONNEXION*/
 
 form{
-    width:100%;
+    width:80%;
 }
 label{
     text-align: left;
@@ -755,6 +755,10 @@ main.articlestage p{
 
 /*PAGE INDEX*/
 
+main {
+    width: 100%;
+}
+
 .prof, .assoc{
     display:flex;
     flex-direction : row;
@@ -798,15 +802,32 @@ main.articlestage p{
 
 .stage-index {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 400px);
     width: 80%;
-    gap: 10px;
+    gap: 30px;
     margin-top: 20px;
+    justify-content: center;
 }
 
 .stage-index a {
     text-decoration: none;
 }
+
+.avis-index {
+    display: grid;
+    grid-template-columns: repeat(3, 400px);
+    width: 80%;
+    gap: 30px;
+    margin-top: 20px;
+    justify-content: center;
+    height: 100%;
+}
+.avis {
+    display: flex;
+    flex-direction: column;
+}
+
+
 /* Responsive page cours */
 @media screen and (max-width: 768px) {
 .titre-cours {
