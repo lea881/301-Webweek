@@ -21,7 +21,11 @@ $unAvis = $resultats[0];
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <?php include '../includes/header.php';?> 
+    <?php 
+    //J'utilise la variable path pour que le chemin s'adapte en fonction de la page (ce ne sont pas les même chemin si on vient de index ou d'une autre page)
+    $path = "../";
+    include '../includes/header.php';?> 
+    
     <main>
         <!-- Si l'utilisateur est connecté en tant qu'admin il peut modifier-->
         <?php if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true){?>

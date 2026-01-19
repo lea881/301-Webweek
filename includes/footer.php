@@ -1,15 +1,15 @@
 <footer>
     <div class="footer-logo">
-    <a href="../index.php">
-      <img src="../img/logo.jpg" alt="Logo" />
+    <a href="<?php echo $path; ?>index.php">
+      <img src="<?php echo $path; ?>img/logo.jpg" alt="Logo" />
     </a>
   </div>
   <nav class="footer-menu">
     <ul>
-      <li><a href="../pages/association.php">Association</a></li>
-      <li><a href="../pages/cours.php">Cours</a></li>
-      <li><a href="../pages/histoire.php">Histoire</a></li>
-      <li><a href="../pages/stagecarte.php">Stage</a></li>
+      <li><a href="<?php echo $path; ?>pages/association.php">Association</a></li>
+      <li><a href="<?php echo $path; ?>pages/cours.php">Cours</a></li>
+      <li><a href="<?php echo $path; ?>pages/histoire.php">Histoire</a></li>
+      <li><a href="<?php echo $path; ?>pages/stagecarte.php">Stage</a></li>
     </ul>
   </nav>
   <div class="footer-droite">
@@ -18,10 +18,10 @@
     </div>
     <div class="footer-rs">
         <a href="https://www.facebook.com/people/A%C3%AFkido-Le-Puy-en-Velay/100070297455766/" target="_blank">
-        <img src="../img/Facebook_logo_2023.png" alt="logo Facebook" />
+        <img src="<?php echo $path; ?>img/Facebook_logo_2023.png" alt="logo Facebook" />
         </a>
         <a href="https://www.instagram.com/aikidolepuyenvelay/" target="_blank"><!-- target blank ça permet d'ouvrir l'onglet du réseu social sans quitter le site -->
-        <img src="../img/Instagram_icon.png" alt="logo Instagram" />
+        <img src="<?php echo $path; ?>img/Instagram_icon.png" alt="logo Instagram" />
         </a>
     </div>
   </div>

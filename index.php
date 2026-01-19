@@ -24,7 +24,9 @@ $avis = $db->getObjects("SELECT * FROM avis", 'Avis', []);
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <?php include 'includes/header.php';?>
+    <?php 
+    $path = "";
+    include 'includes/header.php';?>
     <main>
         <h2> Thomas Gavory 6e dan et ses élèves vous accueillent pour découvrir et pratiquer l'aïkido.</h2>
         <h2> Thomas Gavory</h2>

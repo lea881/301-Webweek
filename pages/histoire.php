@@ -9,7 +9,10 @@
 </head>
 
 <body>
-    <?php include '../includes/header.php';?>
+    <?php 
+    //J'utilise la variable path pour que le chemin s'adapte en fonction de la page (ce ne sont pas les même chemin si on vient de index ou d'une autre page)
+    $path = "../";
+    include '../includes/header.php';?>
     <main class="histoire">
 
     <!-- Aï Ki Do -->
