@@ -636,8 +636,10 @@ footer {
 }
 @media (max-width: 768px) {
     .carte, .resultat {
-    grid-template-columns: repeat(1, 300px);
+    grid-template-columns: repeat(1, );
     }
+}
+
 .cartestage{
     background-color: lightgrey;
     text-align: left;
@@ -792,10 +794,10 @@ main.articlestage p{
 
 .aikido-mots{
     height: 200px;
+    width: 100%;
     background-size: cover;
     background-position: center;
     text-align: center;
-    padding: 20px;
 }
 
 .titre-cours h1 {
