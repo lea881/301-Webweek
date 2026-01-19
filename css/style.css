@@ -362,6 +362,7 @@ text-align:justify;
     padding: 30px 20px;
     display: flex;
     flex-direction: column;
+    height: 100%;
     justify-content: space-between;
     transition: all 0.3s ease; /* transition pour hover */
 }
@@ -391,7 +392,13 @@ text-align:justify;
 
 /*Carte stage*/
 
+.carte h3, .carte p {
+    color: white;
+}
 
+.carte:hover h3, .carte:hover p {
+    color: black;
+}
 
 .search-container {
     display: flex;
@@ -419,38 +426,30 @@ text-align:justify;
     font-style: italic;
 }
 
-#listeCompleteStages {
+.liste-stage{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
     width: 80%;
+    gap: 10px;
 }
 
-#listeCompleteStages a {
+#listeCompleteStages a{
     text-decoration: none;
 }
 
-.cartestage{
-    background-color: black;
-    text-align: left;
-    width: 300px;
-    height: 400px;
-    align-content: end;
-    padding-left: 20px;
-} 
-
-.cartestage h3 {
-    text-align: left;
-    color: white;
+.resultat {
+    display: grid;
+    grid-template-columns: repeat(4, 300px);
+    width: 100%;
+    gap: 10px;
 }
 
-.cartestage p {
-    color:white;
+.resultat a {
+    text-decoration: none;
 }
-
 @media (max-width: 768px) {
-    #listeCompleteStages {
-    grid-template-columns: repeat(1, 1fr);
+    .carte, .resultat {
+    grid-template-columns: repeat(1, 300px);
     }
 }
 

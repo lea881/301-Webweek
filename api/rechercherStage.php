@@ -3,16 +3,31 @@ include_once '../classes/database.php';
 include_once '../classes/stage.php';
 include_once '../classes/lieu.php';
 
+
 // Syntaxe compatible array()
 $donnees = array();
 
-if (isset($_GET['recherche']) && !empty($_GET['recherche'])) {
-    $db = database::getInstance('aikido');
-    $recherche = $_GET['recherche'];
 
-    //Rechercher les noms de stage en utilisant like 
-    $sql = "SELECT * FROM stage WHERE nomStage LIKE '%" . $recherche . "%'";
+if (isset($_GET['recherche'])) {
+    $db = database::getInstance('aikido');
+
+    if(!empty($_GET['recherche'])){
+        $recherche = $_GET['recherche'];
+        //Rechercher les noms de stage en utilisant like
+        $sql = "SELECT * FROM stage WHERE nomStage LIKE '%" . $recherche . "%' ORDER BY dateDebut";
+    }
+    else{
+         $sql = "SELECT * FROM stage ORDER BY dateDebut";
+    }
+    
+
+
+    
+
+
+
     $stages = $db->getObjects($sql, 'Stage', array());
+
 
     //Si les dates de fin et de début sont les même on affiche "le ..." sinon "du... au..."
     if ($stages) {
@@ -23,9 +38,11 @@ if (isset($_GET['recherche']) && !empty($_GET['recherche'])) {
                 $dateAffiche = "Du " . $s->getDateDebut() . " au " . $s->getDateFin();
             }
 
+
             // Récupérer le lieu pour les stages
             $villes = $db->getObjects("SELECT * FROM lieu WHERE idLieu = " . $s->getIdLieu(), 'Lieu', array());
             $villeAffiche =  $villes[0]->getVille();
+
 
             $donnees['stages'][] = array(
                 "id"    => $s->getId(),
@@ -39,4 +56,6 @@ if (isset($_GET['recherche']) && !empty($_GET['recherche'])) {
     }
 }
 
+
 echo json_encode($donnees);
+
