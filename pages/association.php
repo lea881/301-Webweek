@@ -11,7 +11,7 @@
     <?php
     //J'utilise la variable path pour que le chemin s'adapte en fonction de la page (ce ne sont pas les même chemin si on vient de index ou d'une autre page)
     $path = "../";
-     include '../includes/header.php'; 
+    include '../includes/header.php'; 
     ?>
    <h1 class="titre-assoc">Thomas Gavory</h1>
    <h2 class="sous-titre-assoc"> 6ème DAN</h2>
