@@ -52,7 +52,7 @@ if(isset($_GET['id'])){
 
     <main class="articlestage">
         <h1><?php echo $stageChoisi->getNom(); ?></h1>
-        <img src="<?php echo $stageChoisi->getImage(); ?>" alt="Affiche du stage"/>
+        <img src="<?php echo $path.$stageChoisi->getImage(); ?>" alt="Affiche du stage"/>
         <h2>Infos pratiques </h2>
         <div>
             <p><strong>Animateur :</strong>
