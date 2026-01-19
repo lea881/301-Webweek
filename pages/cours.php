@@ -11,7 +11,7 @@
     <?php 
     $path = "../";
     include '../includes/header.php'; ?>
-    <h1>AÏKIDO Le-Puy-en-Velay </h1>
+    <h1 class="titre-cours">AÏKIDO Le-Puy-en-Velay </h1>
     <div class="texte_asso">
         <p>L’association Aïkido Le Puy-en-Velay propose des cours d’aïkido pour adultes et adolescents à       partir de 12 ans, au Dojo de Quincieu (1, avenue de Bonneville, 43000 Aiguilhe). Les cours sont assurés par Thomas Gavory, enseignant diplômé d’État, et s’adressent aussi bien aux débutants qu’aux pratiquants confirmés. Les séances se déroulent dans un esprit de partage et de respect, avec des groupes où tous les niveaux sont mélangés afin de favoriser l’apprentissage et la transmission entre les aïkidokas.
         </p> 
