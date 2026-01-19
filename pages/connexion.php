@@ -43,19 +43,20 @@ $result = $stmt->fetch(PDO::FETCH_ASSOC);
 <main>
 <?php
 if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true){
-    echo "Vous êtes connecté en tant que ".  $_SESSION['email']  ?>
-
-    <form action="deconnexion.php" method="post">
-    <input type="submit" name="envoyer" class="bouton" value="Se deconnecter">
-    </form>
-    <form action="../index.php" method="post">
-    <input type="submit" name="envoyer" class="bouton" value="Retourner à la page d'accueil">
-    </form>
+    echo "<h2>Vous êtes connecté en tant que ".  $_SESSION['email']. "</h2>"  ?>
+    <div class="container-boutons">
+        <form action="deconnexion.php" method="post">
+            <input type="submit" name="envoyer" class="bouton" value="Se deconnecter">
+        </form>
+        <form action="../index.php" method="post">
+            <input type="submit" name="envoyer" class="bouton" value="Retourner à la page d'accueil">
+        </form>
+    </div>
 <?php } 
 else {?>
     <div class="container">
-        <h1>Connexion</h1>
         <form action="" method="post">
+            <h1>Connexion</h1>
             <label>
                 <input type="email" name="email" class="champ" placeholder="Adresse e-mail" required>
             </label> <br>
