@@ -357,6 +357,10 @@ footer {
     color: white;
 }
 
+.texte-histoire, .fondateur, .texte-grade {
+    text-align: justify;
+}
+
 .texte-histoire {
     width: 80%;
     justify-content: center;
@@ -380,6 +384,7 @@ footer {
     width: 250px;
     height: 250px;
     margin-top: 30px;
+    object-fit: cover;
 }
 
 /* Cartes */
@@ -762,5 +767,52 @@ main.articlestage p{
 .texte_asso,
 .tarifs {
     width: 90%;
+}
+}
+
+/* Responsive page histoire */
+@media screen and (max-width: 768px) {
+
+.aikido-mots{
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.titre-cours h1 {
+    font-size: 22px;
+}
+
+
+
+.aikido-mots h2 {
+    font-size: 50px;
+}
+
+.mot {
+    margin: 15px;
+}
+
+.fondateur-contenu {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.fondateur img {
+    width: 200px;
+    height: 200px;
+    margin-top: 10px;
+}
+
+.grade-grille {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.carte {
+    padding: 20px 15px;
 }
 }
