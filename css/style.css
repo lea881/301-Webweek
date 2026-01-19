@@ -654,36 +654,68 @@ footer {
     color:#000;
 }
 /*Page association*/
-.galerie_photoscouleur {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 15px; 
-    max-width: 1000px;
-    margin: 20px auto;
+.titre-assoc{
+    margin-top: 0;
+    margin-bottom: 2px;
+    text-align: center;
 }
-.galerie_photoscouleur img {
-    width: 100%;       
-    height: 250px;     
-    object-fit: cover;  
+.sous-titre-assoc{
+    margin-top: 0;
+    margin-bottom: 2px;
+    text-align: center;
+}
+.paragraphe-assoc{
+    margin-top: 0;
+    text-align: center;
 }
 .Thomas-presentation {
-    display: flex;
-    align-items: stretch;
-    gap: 30px;
-    margin-bottom: 40px;
-    max-width: 900px;
+    width: 80%;
+    text-align: justify;
+    justify-content: center;
+    margin-bottom: 30px;
+    margin-top: 20px;
 }
-.Thomas-presentation img{
-    width: 250px;
-    height: auto;
+
+.galerie_photoscouleur {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    width: 80%; 
+    margin: 40px auto;
+    box-sizing: border-box;
+}
+
+.galerie_photoscouleur img {
+    display: block;
+    width: 100%;
+    height: 250px;
     object-fit: cover;
 }
-.Thomas-presentation{
-    flex: 1;
-    margin: 0;
-    display: felx;
-    align-items: center;
+
+.test-carrousel {
+  width: 100%;
+  max-width: 600px;   
+  height: 400px;      
 }
+
+.test-carrousel img {
+  width: 100%;
+  height: 100%;
+}
+
+#btnSuivant {
+  margin-top: 10px;
+}
+.video-aikido {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+}
+
+
 /*PAGE ARTICLE STAGE*/
 
 /* On cible l'image dans la div */

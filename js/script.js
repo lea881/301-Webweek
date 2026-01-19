@@ -88,34 +88,33 @@ function rechercheListener() {
         return;
     }
 }
+//CAROUSSEL PAGE ASSOC/GALERIE
+let grilleImages = [
+    "../img/photo-noir-blanc-couteau.png",
+    "../img/photo-noir-blanc-prise.png",
+    "../img/photo-noir-blanc_prise-proche.png",
+    "../img/photo-noir-blanc-main.png"
+];
 
+let index = 0;
+// 2. Ta fonction de logique (elle ne s'exécute pas toute seule)
+function carrousel() {
+    let imageElement = document.getElementById('imageAffiche');
+    let boutonSuivant = document.getElementById('btnSuivant');
+    let boutonPrecedent = document.getElementById('btnPrecedent');
 
-function initCarousel() {
-    const slides = document.querySelectorAll('.slide');
-    const prevBtn = document.getElementById('prevBtn');
-    const nextBtn = document.getElementById('nextBtn');
-
-
-    // On vérifie que les éléments existent sur la page avant de lancer
-    if (slides.length > 0 && prevBtn && nextBtn) {
-       
-        function changeSlide(direction) {
-            slides[indexCarousel].classList.remove('active');
-            indexCarousel = indexCarousel + direction;
-
-            if (indexCarousel >= slides.length) indexCarousel = 0;
-            if (indexCarousel < 0) indexCarousel = slides.length - 1;
-
-            slides[indexCarousel].classList.add('active');
-        }
-
-        nextBtn.addEventListener('click', () => changeSlide(1));
-        prevBtn.addEventListener('click', () => changeSlide(-1));
-
-        // Auto-défilement
-        setInterval(() => changeSlide(1), 5000);
+    // On vérifie si les éléments existent sur la page actuelle
+    if (imageElement && boutonSuivant) {
+        boutonSuivant.addEventListener('click', function() {
+            index = index + 1;
+            if (index >= grilleImages.length) {
+                index = 0;
+            }
+            imageElement.src = grilleImages[index];
+        });
     }
 }
+
 //AFFICHER LE MENU AU CLIC EN FORMAT MOBILE
 function basculerMenu() {
     let bouton = document.getElementById('bouton');
@@ -139,23 +138,20 @@ function basculerMenu() {
 
 
 function init() {
-
-
+    carrousel();
     // on recupere l'element boutonVoirPlus et on ajoute l'écouteur pour affiche plus de stages
     let boutonStage = document.getElementById('boutonVoirPlus');
     if (boutonStage) {
         boutonStage.addEventListener('click', chargerStages);
     }
 
+   
 
     // on recupere l'element inputRecherche et on ajoute l'écouteur pour faire une recherche
     let barre = document.getElementById('inputRecherche');
     if (barre) {
         barre.addEventListener('input', rechercheListener);
     }
-    initCarousel();
-
-
      // on recupere l'element bouton et on ajoute l'écouteur pour afficher le menu burger
     let boutonMenu = document.getElementById('bouton');
     if (boutonMenu !== null) {
@@ -163,9 +159,7 @@ function init() {
     }
 }
 
-
-
-
+ 
 // Lancement au chargement de la page
 window.addEventListener("load", init);
 
