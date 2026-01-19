@@ -277,15 +277,15 @@ footer {
   gap: 10px;
 }
 
-.footer-menu a {
+.footer-menu a, .footer-address a {
   text-decoration: none;
   color: #202020;
   font-size: 16px;
   transition: color 0.3s;
 }
 
-/* LE HOVER */
-.footer-menu a:hover {
+/* --- LE HOVER --- */
+.footer-menu a:hover, .footer-address a:hover {
   color: #2F4F5F;
 }
 
@@ -296,22 +296,32 @@ footer {
   flex-direction: column;
   text-align: right;
   align-content: end;
+  margin-top : 15px;
 }
 
-.footer-address p {
-  margin: 0; 
-  margin-bottom: 15px;
-  font-size: 18px;
-}
 
 .footer-rs {
   display: flex;
   gap: 15px;
+  margin-top : 15px;
 }
 
 .footer-rs img {
   width: 32px;
   height: auto;
+}
+
+
+@media (max-width: 768px) {
+    footer{
+        flex-direction: column;
+    }
+
+    .footer-droite{
+        text-align: left;
+        align-content: start; 
+    }
+
 }
 
 
@@ -417,12 +427,22 @@ text-align:justify;
 }
 
 /* PAGE COURS */
+.titre-cours {
+    background-image: url('../img/banniere_page_cours.png');
+    width: 100%;
+    height: 400px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .texte_asso{
     width: 80%;
     text-align: justify;
     justify-content: center;
     margin-bottom: 30px;
-    margin-top: 20pxs;
+    margin-top: 20px;
 }
 
 .container{
@@ -542,7 +562,7 @@ text-align:justify;
     font-size: 14px;
 }
 
-
+/*Page stage*/
 .search-container {
     display: flex;
     justify-content: center;
