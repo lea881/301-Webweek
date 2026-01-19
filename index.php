@@ -22,22 +22,45 @@ $avis = $db->getObjects("SELECT * FROM avis", 'Avis', []);
     <link rel="stylesheet" href="../css/style.css">
     <title>Accueil</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/mustache.min.js"></script>
+    <script src="js/script.js"></script>
 </head>
 <body>
     <?php 
     $path = "";
     include 'includes/header.php';?>
     <main>
-        <h2> Thomas Gavory 6e dan et ses élèves vous accueillent pour découvrir et pratiquer l'aïkido.</h2>
+    <h1>AIKIDO</h1>
+    <h3>Le puy en Velay</h3>
+
+    <div class="prof">
+        <div class="prof-gauche">
         <h2> Thomas Gavory</h2>
-        <h3>Enseignant diplômé d’état </h3>
-        <img src="/img/photo-prise.png" alt=" photo de Thomas Gavory qui fait une prise">
+        <p>Enseignant diplômé d’état </p>
+        <img src="img/photo-prise.png" alt=" photo de Thomas Gavory qui fait une prise">
+        </div>
+        <div class="prof-droite">
+        <h2> Thomas Gavory 6e dan et ses élèves vous accueillent pour découvrir et pratiquer l'aïkido.</h2>
         <p> Thomas Gavory commence l’Aïkido en 1987 dans le club de Pierre Helley, à Noisy-le-Grand. De 1989 à 2010, il s’entraîne de façon quasi quotidienne au Cercle Tissier, à Vincennes, sous la direction de Christian Tissier Shihan dont il devient l'élève. 
         Il obtient son 6ème dan en 2019 et diplômé d’État, à l'âge de 44 ans.
         <br>Les cours sont assurés par Thomas Gavory.</p>
-        <a href="cours.php">
-        <button type="button">Découvrir les cours -></button>
-        </a>
+        <a href="pages/cours.php"><button type="button" class="bouton">Découvrir les cours -></button></a>
+</div>
+</div>
+        <section class="aikido-mots">
+        <div class="mot">
+            <h2>Aï</h2>
+            <p>Harmonie</p>
+        </div>
+        <div class="mot">
+            <h2>Ki</h2>
+            <p>Énergie</p>
+        </div>
+        <div class="mot">
+            <h2>Do</h2>
+            <p>Voie</p>
+        </div>
+    </section>
 
     <!--Afficher les 3 premiers stages -->
         <?php foreach ($stages as $unStage) :
@@ -51,7 +74,7 @@ $avis = $db->getObjects("SELECT * FROM avis", 'Avis', []);
         <!-- Lien pour rediriger vers le stage en détail en fonction de l'id-->
         <a href="pages/articlestage.php?id=<?php echo $unStage->getId(); ?>">  
             <!-- Afficher les stages--> 
-            <div class="carte">
+            <div class="cartestage">
                 <img src="<?php echo $unStage->getImage(); ?>" alt="Affiche du stage" />
                 <h3> · <?php echo $unStage->getNom(); ?></h3>
 
@@ -71,12 +94,12 @@ $avis = $db->getObjects("SELECT * FROM avis", 'Avis', []);
 
         <!--Pour afficher les nouveaux stages-->
         <div id="nouveauxStages"></div>
-                <button id="boutonVoirPlus">Voir plus de stages</button>
+                <button id="boutonVoirPlus" class="bouton">Voir plus de stages</button>
                 <!--Afficher les stages en plus grâce à mustache-->
-                <script id="templateressources" type="text/html">
+                <script id="templateressources" type="text/html" >
                     {{#stages}}
                     <a href="articlestage.php?id={{id}}">
-                        <div class="carte">
+                        <div class="cartestage">
                             <img src="{{image}}" alt="Affiche" />
                             <h3> · {{nom}}</h3>
                             <p>
@@ -90,31 +113,22 @@ $avis = $db->getObjects("SELECT * FROM avis", 'Avis', []);
                     {{/stages}}
                 </script>
 
-        <script src="js/mustache.min.js"></script>
-        <script src="js/script.js"></script>
-    </main> 
-        <div id="nouveauxStages">
-        </div>
-        <button id="boutonVoirPlus">Voir plus de stages</button>
-        <!--Afficher les stages en plus grâce à mustache-->
-        <script id="templateressources" type="text/html">
-            {{#stages}}
-            <a href="articlestage.php?id={{id}}">
-                <div class="carte">
-                    <img src="{{image}}" alt="Affiche" />
-                    <h3> · {{nom}}</h3>
-                    <p>
-                        <!--Afficher différement sir le stage dure un seul jour ou plusieurs (pour avoir le meme affichage que sur les autres pages)-->
-                        {{#memeJour}} Le {{debut}} {{/memeJour}}
-                        {{^memeJour}} Du {{debut}} au {{fin}} {{/memeJour}}
-                    </p>
-                    <p>{{ville}}</p>
-                </div>
+        <div class="assoc">
+            <div class="assoc-gauche">
+            <h2> Association</h2>
+            <p>L’association Aïkido Le Puy-en-Velay propose des cours d’aïkido pour adultes et adolescents à partir de 12 ans, au dojo de Quincieu (1, avenue de Bonneville, 43000 Aiguilhe).</p>
+            <a href="association.php">
+            <button type="button" class="bouton">En savoir plus</button>
             </a>
-            {{/stages}}
-        </script>
+        </div>
+            <div class="assoc-gauche">
+        <img src="img/Cours.png" alt=" image d'un cours au dojo">
+        </div>
+        </div>
 
+        <h2>Avis</h2>
         <?php foreach ($avis as $unAvis) : ?>
+        <div class="carte"> 
             <div class="avis">
                 <h3><?php echo $unAvis->getNomAvis(). " ". $unAvis->getNoteAvis();?> /5 </h3>
                 <?php echo $unAvis->getTitreAvis(). "<br>". $unAvis->getDescriptionAvis();?>
@@ -122,14 +136,14 @@ $avis = $db->getObjects("SELECT * FROM avis", 'Avis', []);
         
             <form action="api/supprimerAvis.php" method="POST" class="suppression-avis">
                 <input type="hidden" name="idAvisActuel" value="<?php echo $unAvis->getIdAvis(); ?>">
-                <button type="submit" class="supprimer">Supprimer l'avis</button>
+                <button type="submit" class="bouton">Supprimer l'avis</button>
             </form>
 
             <form action="pages/modifierAvis.php" method="POST" class="modification-avis">
                 <input type="hidden" name="idAvisActuel" value="<?php echo $unAvis->getIdAvis(); ?>">
-                <button type="submit" class="modifier">Modifier l'avis</button>
+                <button type="submit" class="bouton">Modifier l'avis</button>
             </form>
-
+        </div>
         <?php endforeach ?>
 
     <section class="section-formulaire-avis">
@@ -137,25 +151,16 @@ $avis = $db->getObjects("SELECT * FROM avis", 'Avis', []);
         <form action="api/ajouterAvis.php" method="POST" class="formulaire-avis">
             <div>
                 <label>Nom :</label>
-                <input type="text" id="nomAvis" name="nomAvis" required placeholder="Jean Dupont">
+                <input type="text"  class="champ" id="nomAvis" name="nomAvis" required placeholder="Jean Dupont">
             </div>
-
-        <script src="js/mustache.min.js"></script>
-        <script src="js/script.js"></script>
-        <h2> Association</h2>
-        <p>L’association Aïkido Le Puy-en-Velay propose des cours d’aïkido pour adultes et adolescents à partir de 12 ans, au dojo de Quincieu (1, avenue de Bonneville, 43000 Aiguilhe).</p>
-        <img src="/img/Cours.png" alt=" image d'un cours au dojo">
-        <a href="association.php">
-        <button type="button">En svoir plus</button>
-        </a>
             <div>
                 <label>Titre de votre message :</label>
-                <input type="text" id="titreAvis" name="titreAvis" required placeholder="Un super club !">
+                <input type="text"  class="champ" id="titreAvis" name="titreAvis" required placeholder="Un super club !">
             </div>
 
             <div>
                 <label>Note :</label>
-                <select id="noteAvis" name="noteAvis" required>
+                <select id="noteAvis" name="noteAvis"  class="champ" required>
                     <option value="5">5</option>
                     <option value="4">4</option>
                     <option value="3">3</option>
@@ -166,10 +171,10 @@ $avis = $db->getObjects("SELECT * FROM avis", 'Avis', []);
 
             <div>    
                 <label>Votre commentaire :</label>
-                <textarea id="descriptionAvis" name="descriptionAvis" rows="5" required placeholder="Racontez votre expérience"></textarea>
+                <textarea id="descriptionAvis"  class="champ" name="descriptionAvis" rows="5" required placeholder="Racontez votre expérience"></textarea>
             </div>
 
-            <button type="submit" class="publier">Publier mon avis</button>
+            <button type="submit" class="bouton">Publier mon avis</button>
         </form>
     </section>
         

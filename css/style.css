@@ -668,3 +668,28 @@ main.articlestage p{
     width: 100%;
     margin-top: 20px;
 }
+
+
+/*PAGE INDEX*/
+
+.prof, .assoc{
+    display:flex;
+    flex-direction : row;
+    align-items:center;
+    justify-content: center;
+    gap : 5%;
+    margin-left : 10%;
+    margin-right : 10%;
+}
+
+.prof-droite, .assoc-gauche {
+    flex-direction : column;
+}
+
+.prof img, .assoc img{
+    width:110%;
+}
+
+.prof h2{
+    margin : 0;;
+}
