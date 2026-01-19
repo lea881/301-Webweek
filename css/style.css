@@ -266,12 +266,12 @@ footer {
   transition: color 0.3s;
 }
 
-/* --- LE HOVER --- */
+/* LE HOVER */
 .footer-menu a:hover {
   color: #2F4F5F;
 }
 
-/* --- LE BLOC DE DROITE --- */
+/*  LE BLOC DE DROITE*/
 .footer-droite {
   margin-left: auto;
   display: flex;
@@ -570,15 +570,32 @@ text-align:justify;
     align-content: end;
     padding-left: 20px;
 } 
-
 .cartestage h3 {
     text-align: left;
     color: black;
 }
-
 .cartestage p {
     color:#000;
 }
+/*Page association*/
+.galerie_photoscouleur {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px; 
+    padding: 20px;
+}
+.galerie_photoscouleur img {
+    width: 100%;       
+    height: 250px;     
+    object-fit: cover; 
+    border-radius: 8px; 
+    transition: transform 0.3s ease;
+}
+.galerie-photos img:hover {
+    transform: scale(1.03);
+    cursor: pointer;
+}
+
 
 /*PAGE ARTICLE STAGE*/
 
