@@ -417,12 +417,22 @@ text-align:justify;
 }
 
 /* PAGE COURS */
+.titre-cours {
+    background-image: url('../img/banniere_page_cours.png');
+    width: 100%;
+    height: 400px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .texte_asso{
     width: 80%;
     text-align: justify;
     justify-content: center;
     margin-bottom: 30px;
-    margin-top: 20pxs;
+    margin-top: 20px;
 }
 
 .container{
@@ -542,7 +552,7 @@ text-align:justify;
     font-size: 14px;
 }
 
-
+/*Page stage*/
 .search-container {
     display: flex;
     justify-content: center;
