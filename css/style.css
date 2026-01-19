@@ -229,7 +229,7 @@ header {
 
     .nav-burger {
         display: none;
-        position: absolute; /*Pour que la div se place au dessus des autres dans les déplacer*/
+        position: absolute; /*Pour que  div se place au dessus des autres dans les déplacer*/
         top: 100%;
         right: 0;
         background-color: #ffffff;
@@ -256,7 +256,7 @@ footer {
   bottom: 0;
   background-color: white;
 }
-
+/* Footer logo */
 .footer-logo img{
     display: flex;
     justify-content: left;
