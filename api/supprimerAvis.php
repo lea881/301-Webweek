@@ -1,6 +1,7 @@
 <?php
 include_once '../classes/database.php';
 include_once '../classes/avis.php';
+session_start();
 
 //Si l'utilisateur est connecté, on peut supprimer l'avis
 if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true){
