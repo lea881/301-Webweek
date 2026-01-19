@@ -6,10 +6,10 @@
   </div>
   <nav class="footer-menu">
     <ul>
-      <li><a href="<?php echo $path; ?>pages/association.php">Association</a></li>
-      <li><a href="<?php echo $path; ?>pages/cours.php">Cours</a></li>
-      <li><a href="<?php echo $path; ?>pages/histoire.php">Histoire</a></li>
-      <li><a href="<?php echo $path; ?>pages/stagecarte.php">Stage</a></li>
+      <li><a href="../pages/association.php">Association</a></li>
+      <li><a href="../pages/cours.php">Cours</a></li>
+      <li><a href="../pages/histoire.php">Histoire</a></li>
+      <li><a href="../pages/stagecarte.php">Stage</a></li>
     </ul>
   </nav>
   <div class="footer-droite">
