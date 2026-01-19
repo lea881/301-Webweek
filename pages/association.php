@@ -9,9 +9,12 @@
     <?php include '../includes/header.php'; 
     ?>
 </head>
-
 <body>
-
+    <?php
+    //J'utilise la variable path pour que le chemin s'adapte en fonction de la page (ce ne sont pas les même chemin si on vient de index ou d'une autre page)
+    $path = "../";
+     include '../includes/header.php'; 
+    ?>
    <h1>Thomas Gavory</h1>
    <h2> 6ème DAN</h2>
    <p> Diplômé d'État</p>

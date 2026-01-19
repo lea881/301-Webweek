@@ -1,3 +1,15 @@
+<?php 
+
+$nom = null;
+$prenom=null;
+//si le formulaire est envoyé 
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['envoyer'])) {
+//Je stockes l'email et le mdp dans des variables
+$nom = $_POST['nom'];
+$prenom = $_POST['prenom'];
+}
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -7,8 +19,15 @@
     <title>Contact</title>
 </head>
 <body>
-    <?php include '../includes/header.php';?>
+    <?php 
+    //J'utilise la variable path pour que le chemin s'adapte en fonction de la page (ce ne sont pas les même chemin si on vient de index ou d'une autre page)
+    $path = "../";
+    include '../includes/header.php';?>
     <main>
+        <?php if ($nom !=null && $prenom !=null){
+        echo "<h3> Merci pour votre message".$nom.  " ". $prenom . "</h3>" ;
+        }
+        ?>
         <form action="#" method="post">
             <h1>Inscription / Nous contacter</H1>
 
@@ -24,7 +43,7 @@
             <label for="message" class="titre">Message :</label><br>
             <textarea id="message" class="champ" name="message"></textarea><br><br>
 
-            <button class="bouton">Envoyer</button>
+            <button type="submit" class="bouton" name="envoyer">Envoyer</button>
         </form>
     </main>
     <?php include '../includes/footer.php'; ?>

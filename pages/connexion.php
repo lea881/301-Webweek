@@ -39,35 +39,38 @@ $result = $stmt->fetch(PDO::FETCH_ASSOC);
 </head>
 <body>
 
-<?php include '../includes/header.php'; ?>
-<main>
-<?php
-if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true){
-    echo "<h2>Vous êtes connecté en tant que ".  $_SESSION['email']. "</h2>"  ?>
-    <div class="container-boutons">
-        <form action="deconnexion.php" method="post">
-            <input type="submit" name="envoyer" class="bouton" value="Se deconnecter">
-        </form>
-        <form action="../index.php" method="post">
-            <input type="submit" name="envoyer" class="bouton" value="Retourner à la page d'accueil">
-        </form>
-    </div>
-<?php } 
-else {?>
-    <div class="container">
-        <form action="" method="post">
-            <h1>Connexion</h1>
-            <label>
-                <input type="email" name="email" class="champ" placeholder="Adresse e-mail" required>
-            </label> <br>
-            <label>
-                <input type="password" name="mdp" class="champ" placeholder="Mot de passe" required>
-            </label><br>
-            <input type="submit" name="envoyer" class="bouton" value="Se connecter">
-        </form>
-    <?php } ?>
-    </div>
-</main>
-<?php include '../includes/footer.php'; ?>
+    <?php 
+    //J'utilise la variable path pour que le chemin s'adapte en fonction de la page (ce ne sont pas les même chemin si on vient de index ou d'une autre page)
+    $path = "../";
+    include '../includes/header.php'; ?>
+    <main>
+    <?php
+    if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true){
+        echo "<h2>Vous êtes connecté en tant que ".  $_SESSION['email']. "</h2>"  ?>
+        <div class="container-boutons">
+            <form action="deconnexion.php" method="post">
+                <input type="submit" name="envoyer" class="bouton" value="Se deconnecter">
+            </form>
+            <form action="../index.php" method="post">
+                <input type="submit" name="envoyer" class="bouton" value="Retourner à la page d'accueil">
+            </form>
+        </div>
+    <?php } 
+    else {?>
+        <div class="container">
+            <form action="" method="post">
+                <h1>Connexion</h1>
+                <label>
+                    <input type="email" name="email" class="champ" placeholder="Adresse e-mail" required>
+                </label> <br>
+                <label>
+                    <input type="password" name="mdp" class="champ" placeholder="Mot de passe" required>
+                </label><br>
+                <input type="submit" name="envoyer" class="bouton" value="Se connecter">
+            </form>
+        <?php } ?>
+        </div>
+    </main>
+    <?php include '../includes/footer.php'; ?>
 </body>
 </html>

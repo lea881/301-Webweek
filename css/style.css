@@ -271,15 +271,15 @@ footer {
   flex-direction: column;
 }
 
-.footer-menu a {
+.footer-menu a, .footer-address a {
   text-decoration: none;
   color: #202020;
   font-size: 14px;
   transition: color 0.3s;
 }
 
-/* LE HOVER */
-.footer-menu a:hover {
+/* --- LE HOVER --- */
+.footer-menu a:hover, .footer-address a:hover {
   color: #2F4F5F;
 }
 
@@ -290,22 +290,31 @@ footer {
   flex-direction: column;
   text-align: right;
   align-content: end;
-}
-
-.footer-address p {
-  margin: 0; 
-  margin-bottom: 15px;
-  font-size: 14px;
+  margin-top : 15px;
 }
 
 .footer-rs {
   display: flex;
   gap: 15px;
+  margin-top : 15px;
 }
 
 .footer-rs img {
   width: 32px;
   height: auto;
+}
+
+
+@media (max-width: 768px) {
+    footer{
+        flex-direction: column;
+    }
+
+    .footer-droite{
+        text-align: left;
+        align-content: start; 
+    }
+
 }
 
 
