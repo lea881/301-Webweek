@@ -1,7 +1,3 @@
-<?php
-include '../includes/header.php';
-include '../includes/footer.php';
-?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -11,22 +7,26 @@ include '../includes/footer.php';
     <title>Contact</title>
 </head>
 <body>
-    <form action="#" method="post">
-    <h1>Inscription / Nous contacter</H1>
+    <?php include '../includes/header.php';?>
+    <main>
+        <form action="#" method="post">
+            <h1>Inscription / Nous contacter</H1>
 
-    <label for="nom" class="titre">Nom :</label><br>
-    <input type="text" class="champ" name="nom"><br><br>
+            <label for="nom" class="titre">Nom :</label><br>
+            <input type="text" class="champ" name="nom"><br><br>
 
-    <label for="prenom" class="titre">Prénom :</label><br>
-    <input type="text" class="champ" name="prenom"><br><br>
+            <label for="prenom" class="titre">Prénom :</label><br>
+            <input type="text" class="champ" name="prenom"><br><br>
 
-    <label for="email" class="titre">Email :</label><br>
-    <input type="email" class="champ" name="email"><br><br>
+            <label for="email" class="titre">Email :</label><br>
+            <input type="email" class="champ" name="email"><br><br>
 
-    <label for="message" class="titre">Message :</label><br>
-    <textarea id="message" class="champ" name="message"></textarea><br><br>
+            <label for="message" class="titre">Message :</label><br>
+            <textarea id="message" class="champ" name="message"></textarea><br><br>
 
-    <button>Envoyer
-</form>
+            <button class="bouton">Envoyer</button>
+        </form>
+    </main>
+    <?php include '../includes/footer.php'; ?>
 </body>
 </html>

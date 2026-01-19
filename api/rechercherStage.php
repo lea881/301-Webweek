@@ -31,8 +31,8 @@ if (isset($_GET['recherche']) && !empty($_GET['recherche'])) {
                 "id"    => $s->getId(),
                 "nom"   => $s->getNom(),
                 "image" => $s->getImage(),
-                "date"  => $dateAffiche,  // Nouvelle variable pour Mustache
-                "ville" => $villeAffiche  // Nouvelle variable pour Mustache
+                "date"  => $dateAffiche,  
+                "ville" => $villeAffiche  
             );
         }
         $donnees["status"] = "OK";

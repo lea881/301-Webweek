@@ -109,19 +109,44 @@ function initCarousel() {
         setInterval(() => changeSlide(1), 5000);
     }
 }
+//AFFICHER LE MENU AU CLIC EN FORMAT MOBILE
+function basculerMenu() {
+    let bouton = document.getElementById('bouton');
+    let menu = document.getElementById('menu');
+
+    // On verifier au clic pour changer le sens du V
+
+        //Verifier si le menu est deja visible, si oui on le cache, sinon on l'affiche
+        if (menu.style.display === "flex") {
+            menu.style.display = "none";
+            bouton.style.transform = "rotate(0deg)";
+        } else {
+            menu.style.display = "flex";
+            bouton.style.transform = "rotate(180deg)";
+        }
+}
+
+
 function init() {
-    // on recupere l'element boutonVoirPlus et on ajoute l'écouteur
-    const bouton = document.getElementById('boutonVoirPlus');
-    if (bouton) {
-        bouton.addEventListener('click', chargerStages);
+
+    // on recupere l'element boutonVoirPlus et on ajoute l'écouteur pour affiche plus de stages
+    let boutonStage = document.getElementById('boutonVoirPlus');
+    if (boutonStage) {
+        boutonStage.addEventListener('click', chargerStages);
     }
 
-    // on recupere l'element inputRecherche et on ajoute l'écouteur
-    const barre = document.getElementById('inputRecherche');
+    // on recupere l'element inputRecherche et on ajoute l'écouteur pour faire une recherche
+    let barre = document.getElementById('inputRecherche');
     if (barre) {
         barre.addEventListener('input', rechercheListener);
     }
     initCarousel();
+
+     // on recupere l'element bouton et on ajoute l'écouteur pour afficher le menu burger
+    let boutonMenu = document.getElementById('bouton');
+    if (boutonMenu !== null) { 
+        boutonMenu.addEventListener('click', basculerMenu);
+    }
 }
 
 

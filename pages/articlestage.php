@@ -42,63 +42,66 @@ if(isset($_GET['id'])){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stage</title>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <main>
+    <?php include '../includes/header.php';?>
+
+    <main class="articlestage">
+        <h1><?php echo $stageChoisi->getNom(); ?></h1>
+        <img src="<?php echo $stageChoisi->getImage(); ?>" alt="Affiche du stage"/>
+        <h2>Infos pratiques </h2>
         <div>
-            <h1><?php echo $stageChoisi->getNom(); ?></h1>
-            <img src="<?php echo $stageChoisi->getImage(); ?>" alt="Affiche du stage" style="width:200px;"/>
-            <h2>Infos pratiques </h2>
             <p><strong>Animateur :</strong>
-               <p>
-    <?php 
-        //Afficher tout les animateurs sous la forme nom, nom et nom en fonction du nombre d'animateur de chaque stage
-        //récupère le nombre total d'animateur dans nombreAnimateur
-        $nombreAnimateur = count($animateursStage); 
-        
-        foreach ($animateursStage as $animateur) {
-            //Afficher nom et niveau de l'animateur
-            echo $animateur->getNomAnimateur() . " (" . $animateur->getNiveauAnimateur().")";    
+            <?php 
+            //Afficher tout les animateurs sous la forme nom, nom et nom en fonction du nombre d'animateur de chaque stage
+            //récupère le nombre total d'animateur dans nombreAnimateur
+            $nombreAnimateur = count($animateursStage); 
             
-            
-            //Mettre une virgule si il reste + de 2 animateurs a afficher  
-            if($nombreAnimateur > 2) {
-                echo ", ";    
-            }
-            //Mettre un "et" si il reste + de 2 animateurs à afficher  
-            elseif ($nombreAnimateur == 2) {
-                echo " et ";    
-            } 
-            //Mettre un point si c'est le dernier animateur
-            elseif ($nombreAnimateur == 1){
-                echo ".";    
-            } 
-            //decompte du nombre d'animateur
-            $nombreAnimateur = $nombreAnimateur -1;
-    }
-    ?>
-</p>
-            </p>
-            <!--Afficher une seule date si le debut et la fin sont le meme jour-->
-            <?php if ($stageChoisi->getDateDebut()===$stageChoisi->getDateFin()) {?>
-                <p><strong>Date :</strong>
-                    Le <?php echo $stageChoisi->getDateDebut();
+            foreach ($animateursStage as $animateur) {
+                //Afficher nom et niveau de l'animateur
+                echo $animateur->getNomAnimateur() . " (" . $animateur->getNiveauAnimateur().")";    
+                
+                
+                //Mettre une virgule si il reste + de 2 animateurs a afficher  
+                if($nombreAnimateur > 2) {
+                    echo ", ";    
+                }
+                //Mettre un "et" si il reste + de 2 animateurs à afficher  
+                elseif ($nombreAnimateur == 2) {
+                    echo " et ";    
                 } 
-                else { ?>
-                    <p><strong>Dates :</strong>
-                    Du <?php echo $stageChoisi->getDateDebut(); ?> au <?php echo $stageChoisi->getDateFin(); 
-                }?>
+                //Mettre un point si c'est le dernier animateur
+                elseif ($nombreAnimateur == 1){
+                    echo ".";    
+                } 
+                //decompte du nombre d'animateur
+                $nombreAnimateur = $nombreAnimateur -1;
+            }?>
                 </p>
-
-                <p><strong>Horaires :</strong> <?php echo $stageChoisi->getHoraires(); ?></p>
-                <p><strong>Tarif :</strong> <?php echo $stageChoisi->getTarif(); ?> €</p>
-
-                <p><strong>Lieu : </strong>
-                    <?php echo $lieuAssocie->getNomLieu(); ?>, 
-                    <?php echo $lieuAssocie->getVille(); ?>, 
-                    <?php echo $lieuAssocie->getCodePostale(); ?>
                 </p>
+                <!--Afficher une seule date si le debut et la fin sont le meme jour-->
+                <?php if ($stageChoisi->getDateDebut()===$stageChoisi->getDateFin()) {?>
+                    <p><strong>Date :</strong>
+                        Le <?php echo $stageChoisi->getDateDebut();
+                    } 
+                    else { ?>
+                        <p><strong>Dates :</strong>
+                        Du <?php echo $stageChoisi->getDateDebut(); ?> au <?php echo $stageChoisi->getDateFin(); 
+                    }?>
+                    </p>
+
+                    <p><strong>Horaires :</strong> <?php echo $stageChoisi->getHoraires(); ?></p>
+                    <p><strong>Tarif :</strong> <?php echo $stageChoisi->getTarif(); ?> €</p>
+
+                    <p><strong>Lieu : </strong>
+                        <?php echo $lieuAssocie->getNomLieu(); ?>, 
+                        <?php echo $lieuAssocie->getVille(); ?>, 
+                        <?php echo $lieuAssocie->getCodePostale(); ?>
+                    </p>
+        </div>
+        <a href="contact.php" class="bouton">S'inscrire</a>
     </main>
-    
+    <?php include '../includes/footer.php';?>
 </body>
 </html>

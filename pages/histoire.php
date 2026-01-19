@@ -5,15 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Histoire</title>
       <link rel="stylesheet" type="text/css" href="../css/style.css">
-      <?php
-    include '../includes/header.php';
-    include '../includes/footer.php';
-?>
 
 </head>
 
 <body>
-
+    <?php include '../includes/header.php';?>
     <main class="histoire">
 
     <!-- Aï Ki Do -->
@@ -116,6 +112,8 @@ L’Aïkido se pratique à mains nues, au sabre ou au bâton et se base sur des 
         </div>
  </div> 
     </section> 
+
+    <?php include '../includes/footer.php';?>
 
 </body>
 </html>

@@ -12,14 +12,28 @@
   font-style: normal;
 }
 
+
+* {
+    /*Empêche le défilement horizontal*/
+    box-sizing: border-box; 
+}
+
 body{
     display:flex;
     align-items: center;
-    justify-content: space-around;
+    min-height: 100vh;
     flex-direction: column;
     font-family: Arial, sans-serif;
 }
 
+main{
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    flex: 1;
+}
+
+/*TITRES*/
 h1 {
     font-family: "Cabinet" , sans-serif;
     font-size: 60px;
@@ -44,8 +58,41 @@ p {
     color: #000;
 }
 
+/*TITRE FORMAT MOBILE*/
+@media (max-width: 768px) { 
+    
+h1 {
+    font-family: "Cabinet" , sans-serif;
+    font-size: 35px;
+    color: #000;
+}
 
-/*contact*/
+h2 {
+    font-family: 'Clash', sans-serif;
+    font-size: 25px;
+    color: #000;
+}
+
+h3 {
+    font-family: 'Cabinet', sans-serif;
+    font-size: 20px;
+    color: #000;
+}
+
+p {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+}
+}
+
+
+
+/*FORMULAIRE CONTACT + MODIFIERAVIS*/
+
+form{
+    width:100%;
+}
 label{
     text-align: left;
     align-items: left;
@@ -57,11 +104,9 @@ label{
     display: flex;
     justify-content: center;
     background-color: lightgrey;
-    width: 200px;
-    height: 20px;
+    width:100%;
     border: 10px lightgrey;
-    border-radius: 10px;
-    gap: 20px;
+    border-radius: 2px;
     padding: 10px;
 }
 
@@ -77,7 +122,7 @@ button {
 
 /* HEADER */
 
-.header {
+header {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -97,12 +142,12 @@ button {
 }
 
 /* MENU */
-.menu {
+.menu-desktop {
     display: flex;
     gap: 150px;
 }
 
-.menu a {
+.menu-desktop a {
     text-decoration: none;
     padding-bottom: 5px;
     color: #000;
@@ -113,12 +158,16 @@ button {
     transition: border-color 0.3s;
 }
 
-.menu a:hover {
+.menu-desktop a:hover {
     border-bottom-color: #2f4f5f;
 }
 
+.menu-burger {
+    display:none;
+}
+
 /* ZONE DROITE */
-.header-droit {
+.header-droit-desktop {
     display: flex;
     align-items: center;
     gap: 15px;
@@ -133,24 +182,72 @@ button {
 }
 
 /* BOUTON CONTACT */
-.contact {
+.bouton {
     background-color: #2f4f5f;
-    color: white;
+    color: white !important;
     padding: 8px 18px;
+}
+
+.bouton:hover {
+    background-color: #162b36;
+}
+
+
+@media (max-width: 768px) {
+
+    /*Cachet le menu pour desktop*/
+    .menu-desktop, 
+    .header-droit-desktop {
+        display: none;
+    }
+
+    /*Afficher les éléments du menu burger*/
+    .menu-burger {
+        display: block;
+        position: relative;
+    }
+
+    .nav-burger {
+        display: none;
+        position: absolute; /*Pour que la div se place au dessus des autres dans les déplacer*/
+        top: 100%;
+        right: 0;
+        background-color: #ffffff;
+        min-width: 200px;
+        flex-direction: column;
+    }
+
+    .nav-burger a {
+        padding: 15px 20px;
+        text-decoration: none;
+        color : black;
+        font-size: 16px;
+    }
+
 }
 
 /*FOOTER*/
 footer {
   display: flex;
-  align-items: flex-start; 
   flex-direction: row;
   padding: 40px 20px;
-  font-family: Arial, sans-serif;
-  gap: 30px; 
+  justify-content: space-between; 
+  width: 90%;
+  bottom: 0;
+  background-color: white;
 }
-.footer-logo img {
-  width: 60px;
-  display: block;
+
+.footer-menu{
+    flex: 1;
+}
+
+
+.footer-logo img{
+    display: flex;
+    justify-content: left;
+    width: 60px;
+    align-items:flex-start;
+    margin: 20px
 }
 
 .footer-menu ul {
@@ -179,13 +276,14 @@ footer {
   margin-left: auto;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
   text-align: right;
+  align-content: end;
 }
 
 .footer-address p {
   margin: 0; 
   margin-bottom: 15px;
+  font-size: 18px;
 }
 
 .footer-rs {
@@ -294,18 +392,174 @@ text-align:justify;
 
 /*Carte stage*/
 
-main {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: left;
-    margin-top : 20px;
-    margin-bottom: 20px;
-    margin-left: 300px;
+@media (max-width: 768px) {
+    #listeCompleteStages {
+    grid-template-columns: repeat(1, 1fr);
+    }
 }
 
-main a {
+/* PAGE COURS */
+.texte_asso{
+    width: 80%;
+    text-align: justify;
+    justify-content: center;
+    margin-bottom: 30px;
+    margin-top: 20pxs;
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.image-cours{
+    display: flex;
+    height: 400px;
+    width: auto;
+    justify-content: flex-start;
+    margin-left: 143px;
+}
+
+.info-cours h3, .info-cours p {
+    margin: 0; 
+}
+
+.info-cours {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px; 
+}
+
+.info-cours p {
+    margin-left: 33px; /* décale texte en dessous titre */
+    margin-top: 0px;
+    margin-bottom: 10px; 
+}
+
+/* Icones */
+.icone {
+    width: 20px;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+.tarifs {
+    width: 90%;
+    text-align: center;
+}
+
+/* S'nscrire */
+
+.btn-inscription {
+    display: inline-block;
+    margin: 40px auto;
+    padding: 10px 20px;
+    background-color: #2f4f5f;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* Grille */
+.grade-grille {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+    width: 100%;
+    margin-top: 40px;
+}
+
+.tarif-grille {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    width: 100%;
+    margin-top: 40px;
+    justify-content: space-around;
+}
+
+.carte h2,
+.carte p {
+    color: #fff;
+}
+
+/* Quand hover → texte noir */
+.carte:hover h2,
+.carte:hover p {
+    color: #000;
+}
+
+.carte {
+    background-color: #000; 
+    border: 1px solid #000;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.3s ease; /* transition pour hover */
+}
+
+/* Hover */
+.carte:hover {
+    background-color: #fff;
+    color: #000;
+    transform: scale(1.03);
+}
+
+/* Titre */
+.carte-header {
+    margin-bottom: 20px;
+}
+
+.carte-header h3 {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Texte */
+.carte-body p {
+    font-size: 14px;
+}
+
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+/* Style du champ de saisie */
+#inputRecherche {
+    width: 100%;
+    max-width: 600px;
+    padding: 12px 20px;
+    font-size: 20px;
+    border: 2px solid #ddd;
+    outline: none;
+}
+
+/* Effet au clic (focus) */
+#inputRecherche:focus {
+    border-color: #2F4F5F;
+}
+
+#inputRecherche::placeholder {
+    color: #aaa;
+    font-style: italic;
+}
+
+#listeCompleteStages {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    width: 100%;
+    margin-top: 40px;
+}
+
+#listeCompleteStages a {
     text-decoration: none;
 }
 .cartestage{
@@ -342,3 +596,37 @@ main a {
     cursor: pointer;
 }
 
+
+/*PAGE ARTICLE STAGE*/
+
+/* On cible l'image dans la div */
+
+main.articlestage {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    width: 100%;
+}
+.articlestage img {
+    width: 100%;     
+    height: 40vh;      
+    object-fit: cover; 
+    object-position: center;
+    display: block;
+}
+
+main.articlestage div {
+    width: 90%;          /* Indispensable pour voir le centrage sur mobile */
+    max-width: 600px;    /* Largeur de lecture confortable sur ordinateur */
+    text-align: center;    /* Aligne les lignes à gauche à l'intérieur du bloc */
+}
+main.articlestage p{
+    text-align: left;
+}
+
+.articlestage h1, 
+.articlestage h2 {
+    text-align: center;
+    width: 100%;
+    margin-top: 20px;
+}

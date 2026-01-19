@@ -1,5 +1,4 @@
 <?php 
-include '../includes/header.php';
 include_once '../classes/database.php';
 include_once '../classes/stage.php';
 include_once '../classes/lieu.php';
@@ -20,6 +19,7 @@ $stages = $db->getObjects("SELECT * FROM stage", 'Stage', []);
     <title>Stages</title>
 </head>
 <body>
+    <?php include '../includes/header.php';?>
     <main>
         <div class="search-container">
             <input type="text" id="inputRecherche" placeholder="Rechercher un stage">
@@ -42,7 +42,7 @@ $stages = $db->getObjects("SELECT * FROM stage", 'Stage', []);
             
         <!-- Afficher les stages--> 
             <div class="cartestage">
-                <img src="<?php echo $unStage->getImage(); ?>" alt="Affiche du stage" />
+                <img src="<?php echo $unStage->getImage(); ?>" alt="Affiche du stage"  width="100%;" />
                 <h3><?php echo $unStage->getNom(); ?></h3>
 
                 <p><?php if ($unStage->getDateDebut()===$unStage->getDateFin()) {?>
@@ -71,14 +71,9 @@ $stages = $db->getObjects("SELECT * FROM stage", 'Stage', []);
     </a>
     {{/stages}}
 </script>
-
 <script src="../js/mustache.min.js"></script>
 <script src="../js/script.js"></script>
     </main> 
-<footer>
-    <?php
-    include '../includes/footer.php';
-    ?>
-</footer>  
+    <?php include '../includes/footer.php';?> 
 </body>
 </html>
