@@ -68,6 +68,29 @@ $avis = $db->getObjects("SELECT * FROM avis", 'Avis', []);
         <?php endforeach; ?>
 
         <!--Pour afficher les nouveaux stages-->
+        <div id="nouveauxStages"></div>
+                <button id="boutonVoirPlus">Voir plus de stages</button>
+                <!--Afficher les stages en plus grâce à mustache-->
+                <script id="templateressources" type="text/html">
+                    {{#stages}}
+                    <a href="articlestage.php?id={{id}}">
+                        <div class="carte">
+                            <img src="{{image}}" alt="Affiche" />
+                            <h3> · {{nom}}</h3>
+                            <p>
+                                <!--Afficher différement sir le stage dur une seul jour ou plusieurs (pour avoir le meme affichage que sur les autres pages)-->
+                                {{#memeJour}} Le {{debut}} {{/memeJour}}
+                                {{^memeJour}} Du {{debut}} au {{fin}} {{/memeJour}}
+                            </p>
+                            <p>{{ville}}</p>
+                        </div>
+                    </a>
+                    {{/stages}}
+                </script>
+
+        <script src="js/mustache.min.js"></script>
+        <script src="js/script.js"></script>
+    </main> 
         <div id="nouveauxStages">
         </div>
         <button id="boutonVoirPlus">Voir plus de stages</button>

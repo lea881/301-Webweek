@@ -82,7 +82,6 @@ function rechercheListener() {
         barreRecherche.innerHTML = ""; //On efface l'ancien resultat de la recherche
     }
 }
-let indexCarousel = 0;
 
 function initCarousel() {
     const slides = document.querySelectorAll('.slide');
