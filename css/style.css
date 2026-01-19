@@ -492,7 +492,7 @@ footer {
 }
 
 .tarifs {
-    width: 90%;
+    width: 80%;
     text-align: center;
 }
 
@@ -674,4 +674,60 @@ main.articlestage p{
     text-align: center;
     width: 100%;
     margin-top: 20px;
+}
+
+
+/* Responsive page cours */
+@media screen and (max-width: 768px) {
+
+    h1 {
+        text-align: center;
+        font-size: 22px;
+    }
+
+    .texte_asso,
+    .tarifs {
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    /* Bloc image + infos */
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-cours {
+        margin-left: 0;
+        justify-content: center;
+        height: auto;
+    }
+
+    .image-cours img {
+        width: 90%;
+        height: auto;
+    }
+
+    .info-cours {
+        width: 90%;
+        text-align: left;
+    }
+
+    .info-cours p {
+        margin-left: 28px;
+    }
+    
+
+    /* Grille tarifs */
+    .tarif-grille {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .btn-inscription {
+        display: block;
+        width: fit-content;
+        margin: 30px auto;
+        font-size: 14px;
+    }
 }
