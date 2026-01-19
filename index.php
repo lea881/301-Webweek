@@ -30,8 +30,10 @@ $avis = $db->getObjects("SELECT * FROM avis", 'Avis', []);
     $path = "";
     include 'includes/header.php';?>
     <main>
+    <div class="banniere-index">
     <h1>AIKIDO</h1>
     <h3>Le puy en Velay</h3>
+    </div>
 
     <div class="prof">
         <div class="prof-gauche">
@@ -47,20 +49,6 @@ $avis = $db->getObjects("SELECT * FROM avis", 'Avis', []);
         <a href="pages/cours.php"><button type="button" class="bouton">Découvrir les cours -></button></a>
 </div>
 </div>
-        <section class="aikido-mots">
-        <div class="mot">
-            <h2>Aï</h2>
-            <p>Harmonie</p>
-        </div>
-        <div class="mot">
-            <h2>Ki</h2>
-            <p>Énergie</p>
-        </div>
-        <div class="mot">
-            <h2>Do</h2>
-            <p>Voie</p>
-        </div>
-    </section>
 
     <!--Afficher les 3 premiers stages -->
         <?php foreach ($stages as $unStage) :
