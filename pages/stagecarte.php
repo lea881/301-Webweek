@@ -29,9 +29,7 @@ $stages = $db->getObjects("SELECT * FROM stage", 'Stage', []);
             <input type="text" id="inputRecherche" placeholder="Rechercher un stage">
         </div>
 
-    <div id="resultatsRecherche">
-    </div>
-    <div id="listeCompleteStages">
+    <div id="listeCompleteStages" class="liste-stage">
       <?php foreach ($stages as $unStage) : ?>
         <?php 
             // Récupérer le lieu associé à chacun des stages afficher (avec la classe lieu)
@@ -45,7 +43,7 @@ $stages = $db->getObjects("SELECT * FROM stage", 'Stage', []);
         <a href="articlestage.php?id=<?php echo $unStage->getId(); ?>">
             
         <!-- Afficher les stages--> 
-            <div class="cartestage">
+            <div class="carte">
                 <img src="<?php echo $unStage->getImage(); ?>" alt="Affiche du stage"  width="100%;" />
                 <h3><?php echo $unStage->getNom(); ?></h3>
 
@@ -63,6 +61,8 @@ $stages = $db->getObjects("SELECT * FROM stage", 'Stage', []);
         </a>
       <?php endforeach; ?>
       </div>
+<div id="resultatsRecherche" class="resultat">
+    </div>
 <script id="templateressources" type="text/html">
     {{#stages}}
     <a href="articlestage.php?id={{id}}">
@@ -77,7 +77,8 @@ $stages = $db->getObjects("SELECT * FROM stage", 'Stage', []);
 </script>
 <script src="../js/mustache.min.js"></script>
 <script src="../js/script.js"></script>
+
     </main> 
-    <?php include '../includes/footer.php';?> 
+    <?php include '../includes/footer.php';?>
 </body>
 </html>
