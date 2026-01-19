@@ -10,7 +10,6 @@
 
 <body>
     <?php include '../includes/header.php';?>
-    <main class="histoire">
 
     <!-- Aï Ki Do -->
     <section class="aikido-mots">
@@ -111,6 +110,9 @@ L’Aïkido se pratique à mains nues, au sabre ou au bâton et se base sur des 
             </div>
         </div>
  </div> 
+        <p>Le grade est attribué à l’initiative du professeur et la ceinture des pratiquants reste blanche tout au long de ces apprentissages. Les niveaux sont matérialisés par des ceintures en couleur seulement pour les enfants. 
+Au-delà, les grades “DAN” sont délivrés par la fédération d’Aïkido. Les DAN sont au nombre de dix et récompensent la maîtrise technique et morale. En France, ils sont attribués (jusqu’au 4e DAN) via un examen devant un jury, puis par les hautes autorités à partir du 5e DA.
+</p>
     </section> 
 
     <?php include '../includes/footer.php';?>

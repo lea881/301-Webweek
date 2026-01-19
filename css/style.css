@@ -24,6 +24,8 @@ body{
     min-height: 100vh;
     flex-direction: column;
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 main{
@@ -255,11 +257,6 @@ footer {
   background-color: white;
 }
 
-.footer-menu{
-    flex: 1;
-}
-
-
 .footer-logo img{
     display: flex;
     justify-content: left;
@@ -270,17 +267,14 @@ footer {
 
 .footer-menu ul {
   list-style: none;
-  margin: 0;
-  padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 10px;
 }
 
 .footer-menu a {
   text-decoration: none;
   color: #202020;
-  font-size: 16px;
+  font-size: 14px;
   transition: color 0.3s;
 }
 
@@ -301,7 +295,7 @@ footer {
 .footer-address p {
   margin: 0; 
   margin-bottom: 15px;
-  font-size: 18px;
+  font-size: 14px;
 }
 
 .footer-rs {
@@ -374,7 +368,8 @@ footer {
 /* Cartes */
 
 .grades-section {
-    margin: 80px 0;
+    margin: 40px 0;
+    width: 80%;
 }
 
 /* Grille */
@@ -382,7 +377,7 @@ footer {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: 20px;
-    width: 80%;
+    width: 100%;
     margin-top: 40px;
 }
 

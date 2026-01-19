@@ -74,5 +74,6 @@
         </div>
     </div>
     <a href="contact.php" class="btn-inscription">S'inscrire</a>
+    <?php include '../includes/footer.php';?>
 </body>
 </html>
