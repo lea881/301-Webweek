@@ -398,6 +398,133 @@ text-align:justify;
     }
 }
 
+/* PAGE COURS */
+.texte_asso{
+    width: 80%;
+    text-align: justify;
+    justify-content: center;
+    margin-bottom: 30px;
+    margin-top: 20pxs;
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.image-cours{
+    display: flex;
+    height: 400px;
+    width: auto;
+    justify-content: flex-start;
+    margin-left: 143px;
+}
+
+.info-cours h3, .info-cours p {
+    margin: 0; 
+}
+
+.info-cours {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px; 
+}
+
+.info-cours p {
+    margin-left: 33px; /* décale texte en dessous titre */
+    margin-top: 0px;
+    margin-bottom: 10px; 
+}
+
+/* Icones */
+.icone {
+    width: 20px;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+.tarifs {
+    width: 90%;
+    text-align: center;
+}
+
+/* S'nscrire */
+
+.btn-inscription {
+    display: inline-block;
+    margin: 40px auto;
+    padding: 10px 20px;
+    background-color: #2f4f5f;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* Grille */
+.grade-grille {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+    width: 100%;
+    margin-top: 40px;
+}
+
+.tarif-grille {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    width: 100%;
+    margin-top: 40px;
+    justify-content: space-around;
+}
+
+.carte h2,
+.carte p {
+    color: #fff;
+}
+
+/* Quand hover → texte noir */
+.carte:hover h2,
+.carte:hover p {
+    color: #000;
+}
+
+.carte {
+    background-color: #000; 
+    border: 1px solid #000;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.3s ease; /* transition pour hover */
+}
+
+/* Hover */
+.carte:hover {
+    background-color: #fff;
+    color: #000;
+    transform: scale(1.03);
+}
+
+/* Titre */
+.carte-header {
+    margin-bottom: 20px;
+}
+
+.carte-header h3 {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Texte */
+.carte-body p {
+    font-size: 14px;
+}
+
+
 .search-container {
     display: flex;
     justify-content: center;
