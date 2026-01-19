@@ -49,15 +49,15 @@ $result = $stmt->fetch(PDO::FETCH_ASSOC);
         echo "<h2>Vous êtes connecté en tant que ".  $_SESSION['email']. "</h2>"  ?>
         <div class="container-boutons">
             <form action="deconnexion.php" method="post">
-                <input type="submit" name="envoyer" class="bouton" value="Se deconnecter">
+                <input type="submit" name="envoyer" class="btn" value="Se deconnecter">
             </form>
             <form action="../index.php" method="post">
-                <input type="submit" name="envoyer" class="bouton" value="Retourner à la page d'accueil">
+                <input type="submit" name="envoyer" class="btn" value="Retourner à la page d'accueil">
             </form>
         </div>
     <?php } 
     else {?>
-        <div class="container">
+        <div class="container-bouton">
             <form action="" method="post">
                 <h1>Connexion</h1>
                 <label>
@@ -66,7 +66,7 @@ $result = $stmt->fetch(PDO::FETCH_ASSOC);
                 <label>
                     <input type="password" name="mdp" class="champ" placeholder="Mot de passe" required>
                 </label><br>
-                <input type="submit" name="envoyer" class="bouton" value="Se connecter">
+                <input type="submit" name="envoyer" class="btn" value="Se connecter">
             </form>
         <?php } ?>
         </div>
