@@ -91,5 +91,89 @@ $avis = $db->getObjects("SELECT * FROM avis", 'Avis', []);
         <script src="js/mustache.min.js"></script>
         <script src="js/script.js"></script>
     </main> 
+        <div id="nouveauxStages">
+        </div>
+        <button id="boutonVoirPlus">Voir plus de stages</button>
+        <!--Afficher les stages en plus grâce à mustache-->
+        <script id="templateressources" type="text/html">
+            {{#stages}}
+            <a href="articlestage.php?id={{id}}">
+                <div class="carte">
+                    <img src="{{image}}" alt="Affiche" />
+                    <h3> · {{nom}}</h3>
+                    <p>
+                        <!--Afficher différement sir le stage dure un seul jour ou plusieurs (pour avoir le meme affichage que sur les autres pages)-->
+                        {{#memeJour}} Le {{debut}} {{/memeJour}}
+                        {{^memeJour}} Du {{debut}} au {{fin}} {{/memeJour}}
+                    </p>
+                    <p>{{ville}}</p>
+                </div>
+            </a>
+            {{/stages}}
+        </script>
+
+        <?php foreach ($avis as $unAvis) : ?>
+            <div class="avis">
+                <h3><?php echo $unAvis->getNomAvis(). " ". $unAvis->getNoteAvis();?> /5 </h3>
+                <?php echo $unAvis->getTitreAvis(). "<br>". $unAvis->getDescriptionAvis();?>
+            </div>
+        
+            <form action="api/supprimerAvis.php" method="POST" class="suppression-avis">
+                <input type="hidden" name="idAvisActuel" value="<?php echo $unAvis->getIdAvis(); ?>">
+                <button type="submit" class="supprimer">Supprimer l'avis</button>
+            </form>
+
+            <form action="pages/modifierAvis.php" method="POST" class="modification-avis">
+                <input type="hidden" name="idAvisActuel" value="<?php echo $unAvis->getIdAvis(); ?>">
+                <button type="submit" class="modifier">Modifier l'avis</button>
+            </form>
+
+        <?php endforeach ?>
+
+    <section class="section-formulaire-avis">
+        <h2>Laissez-nous votre avis</h2>
+        <form action="api/ajouterAvis.php" method="POST" class="formulaire-avis">
+            <div>
+                <label>Nom :</label>
+                <input type="text" id="nomAvis" name="nomAvis" required placeholder="Jean Dupont">
+            </div>
+
+        <script src="js/mustache.min.js"></script>
+        <script src="js/script.js"></script>
+        <h2> Association</h2>
+        <p>L’association Aïkido Le Puy-en-Velay propose des cours d’aïkido pour adultes et adolescents à partir de 12 ans, au dojo de Quincieu (1, avenue de Bonneville, 43000 Aiguilhe).</p>
+        <img src="/img/Cours.png" alt=" image d'un cours au dojo">
+        <a href="association.php">
+        <button type="button">En svoir plus</button>
+        </a>
+            <div>
+                <label>Titre de votre message :</label>
+                <input type="text" id="titreAvis" name="titreAvis" required placeholder="Un super club !">
+            </div>
+
+            <div>
+                <label>Note :</label>
+                <select id="noteAvis" name="noteAvis" required>
+                    <option value="5">5</option>
+                    <option value="4">4</option>
+                    <option value="3">3</option>
+                    <option value="2">2</option>
+                    <option value="1">1</option>
+                </select>
+            </div>
+
+            <div>    
+                <label>Votre commentaire :</label>
+                <textarea id="descriptionAvis" name="descriptionAvis" rows="5" required placeholder="Racontez votre expérience"></textarea>
+            </div>
+
+            <button type="submit" class="publier">Publier mon avis</button>
+        </form>
+    </section>
+        
+    <script src="js/mustache.min.js"></script>
+    <script src="js/script.js"></script>
+    </main>
+    <?php include 'includes/footer.php';?>     
 </body>
 </html>

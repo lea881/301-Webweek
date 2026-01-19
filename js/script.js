@@ -83,6 +83,49 @@ function rechercheListener() {
     }
 }
 
+function initCarousel() {
+    const slides = document.querySelectorAll('.slide');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+
+    // On vérifie que les éléments existent sur la page avant de lancer
+    if (slides.length > 0 && prevBtn && nextBtn) {
+        
+        function changeSlide(direction) {
+            slides[indexCarousel].classList.remove('active');
+            indexCarousel = indexCarousel + direction;
+
+            if (indexCarousel >= slides.length) indexCarousel = 0;
+            if (indexCarousel < 0) indexCarousel = slides.length - 1;
+
+            slides[indexCarousel].classList.add('active');
+        }
+
+        nextBtn.addEventListener('click', () => changeSlide(1));
+        prevBtn.addEventListener('click', () => changeSlide(-1));
+
+        // Auto-défilement
+        setInterval(() => changeSlide(1), 5000);
+    }
+}
+//AFFICHER LE MENU AU CLIC EN FORMAT MOBILE
+function basculerMenu() {
+    let bouton = document.getElementById('bouton');
+    let menu = document.getElementById('menu');
+
+    // On verifier au clic pour changer le sens du V
+
+        //Verifier si le menu est deja visible, si oui on le cache, sinon on l'affiche
+        if (menu.style.display === "flex") {
+            menu.style.display = "none";
+            bouton.style.transform = "rotate(0deg)";
+        } else {
+            menu.style.display = "flex";
+            bouton.style.transform = "rotate(180deg)";
+        }
+}
+
+
 function init() {
 
     // on recupere l'element boutonVoirPlus et on ajoute l'écouteur pour affiche plus de stages
@@ -95,6 +138,13 @@ function init() {
     let barre = document.getElementById('inputRecherche');
     if (barre) {
         barre.addEventListener('input', rechercheListener);
+    }
+    initCarousel();
+
+     // on recupere l'element bouton et on ajoute l'écouteur pour afficher le menu burger
+    let boutonMenu = document.getElementById('bouton');
+    if (boutonMenu !== null) { 
+        boutonMenu.addEventListener('click', basculerMenu);
     }
 }
 
