@@ -19,8 +19,8 @@ $avis = $db->getObjects("SELECT * FROM avis", 'Avis', []);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
     <title>Accueil</title>
+    <link rel="icon" href="img/logo.jpg">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/mustache.min.js"></script>
     <script src="js/script.js"></script>
@@ -30,9 +30,8 @@ $avis = $db->getObjects("SELECT * FROM avis", 'Avis', []);
     $path = "";
     include 'includes/header.php';?>
     <main>
-    <div class="banniere-index">
-    <h1>AÏKIDO Le-Puy-en-Velay </h1>
-    </div>
+    <h1>AIKIDO</h1>
+    <h3>Le puy en Velay</h3>
 
     <div class="prof">
         <div class="prof-gauche">
@@ -43,10 +42,24 @@ $avis = $db->getObjects("SELECT * FROM avis", 'Avis', []);
         <p> Thomas Gavory commence l’Aïkido en 1987 dans le club de Pierre Helley, à Noisy-le-Grand. De 1989 à 2010, il s’entraîne de façon quasi quotidienne au Cercle Tissier, à Vincennes, sous la direction de Christian Tissier Shihan dont il devient l'élève. 
         Il obtient son 6ème dan en 2019 et diplômé d’État, à l'âge de 44 ans.
         <br>Les cours sont assurés par Thomas Gavory.</p>
-        <a href="pages/cours.php"><button type="button" class="btn">Découvrir les cours -></button></a>
+        <a href="pages/cours.php"><button type="button" class="bouton">Découvrir les cours -></button></a>
 </div>
 </div>
-<div class="stage-index">
+        <section class="aikido-mots">
+        <div class="mot">
+            <h2>Aï</h2>
+            <p>Harmonie</p>
+        </div>
+        <div class="mot">
+            <h2>Ki</h2>
+            <p>Énergie</p>
+        </div>
+        <div class="mot">
+            <h2>Do</h2>
+            <p>Voie</p>
+        </div>
+    </section>
+
     <!--Afficher les 3 premiers stages -->
         <?php foreach ($stages as $unStage) :
             // Récupérer le lieu associé à chacun des stages afficher (avec la classe lieu)
@@ -59,7 +72,7 @@ $avis = $db->getObjects("SELECT * FROM avis", 'Avis', []);
         <!-- Lien pour rediriger vers le stage en détail en fonction de l'id-->
         <a href="pages/articlestage.php?id=<?php echo $unStage->getId(); ?>">  
             <!-- Afficher les stages--> 
-            <div class="carte">
+            <div class="cartestage">
                 <img src="<?php echo $unStage->getImage(); ?>" alt="Affiche du stage" />
                 <h3><?php echo $unStage->getNom(); ?></h3>
 
@@ -76,16 +89,15 @@ $avis = $db->getObjects("SELECT * FROM avis", 'Avis', []);
             </div>
         </a>
         <?php endforeach; ?>
-        </div>
 
         <!--Pour afficher les nouveaux stages-->
-        <div id="nouveauxStages" class="stage-index"></div>
-                <button id="boutonVoirPlus" class="btn">Voir plus de stages</button>
+        <div id="nouveauxStages"></div>
+                <button id="boutonVoirPlus" class="bouton">Voir plus de stages</button>
                 <!--Afficher les stages en plus grâce à mustache-->
                 <script id="templateressources" type="text/html" >
                     {{#stages}}
                     <a href="articlestage.php?id={{id}}">
-                        <div class="carte">
+                        <div class="cartestage">
                             <img src="{{image}}" alt="Affiche" />
                             <h3>{{nom}}</h3>
                             <p>
@@ -104,7 +116,7 @@ $avis = $db->getObjects("SELECT * FROM avis", 'Avis', []);
             <h2> Association</h2>
             <p>L’association Aïkido Le Puy-en-Velay propose des cours d’aïkido pour adultes et adolescents à partir de 12 ans, au dojo de Quincieu (1, avenue de Bonneville, 43000 Aiguilhe).</p>
             <a href="association.php">
-            <button type="button" class="btn">En savoir plus</button>
+            <button type="button" class="bouton">En savoir plus</button>
             </a>
         </div>
             <div class="assoc-gauche">
@@ -113,7 +125,6 @@ $avis = $db->getObjects("SELECT * FROM avis", 'Avis', []);
         </div>
 
         <h2>Avis</h2>
-        <div class="avis-index">
         <?php foreach ($avis as $unAvis) : ?>
         <div class="avis"> 
                 <h3><?php echo $unAvis->getNomAvis(). " ". $unAvis->getNoteAvis();?> /5 </h3>
@@ -134,7 +145,7 @@ $avis = $db->getObjects("SELECT * FROM avis", 'Avis', []);
         </div>
         </div>
         <?php endforeach ?>
-        </div>
+
     <section class="section-formulaire-avis">
         <h2>Laissez-nous votre avis</h2>
         <form action="api/ajouterAvis.php" method="POST" class="formulaire-avis">
@@ -163,7 +174,7 @@ $avis = $db->getObjects("SELECT * FROM avis", 'Avis', []);
                 <textarea id="descriptionAvis"  class="champ" name="descriptionAvis" rows="5" required placeholder="Racontez votre expérience"></textarea>
             </div>
 
-            <button type="submit" class="btn">Publier mon avis</button>
+            <button type="submit" class="bouton">Publier mon avis</button>
         </form>
     </section>
         
