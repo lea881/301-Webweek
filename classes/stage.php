@@ -34,13 +34,10 @@ class Stage{
     public function getIdLieu() { 
         return $this->idLieu; 
     }
-
     public function ajouterStage(){
     }
-
     public function modifierStage(){
     }
-
     public function supprimerStage(){
     }
 }

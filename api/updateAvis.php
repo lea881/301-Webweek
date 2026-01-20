@@ -16,8 +16,7 @@ $sql = "UPDATE avis SET nomAvis = ?, titreAvis = ?, descriptionAvis = ?, noteAvi
 
 // Requete préparée opour éviter les problèmes avec les apostrophes dans les textes des avis 
 // Doc : https://www.php.net/manual/fr/pdo.prepare.php
-$db->getConnect()->prepare($sql)->execute([$nomAvis, $titreAvis, $descriptionAvis, $noteAvis, $idAvis
-]);
+$db->getConnect()->prepare($sql)->execute([$nomAvis, $titreAvis, $descriptionAvis, $noteAvis, $idAvis]);
 
 //Rediriger vers l'accueil
 header("Location: ../index.php");

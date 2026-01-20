@@ -12,7 +12,6 @@ class Database {
     private $db_dbname;
     private $db_conn;
 
-
     private static $instance = null;
     private function __construct($dbname)
     {
@@ -23,7 +22,6 @@ class Database {
         $this->db_port = $port;
         $this->db_password = $password;
         $this->db_dbname = $dbname;
-
 
         try{
             $dsn = "mysql:host={$this->db_host};port={$this->db_port};dbname={$this->db_dbname};charset=utf8";
@@ -54,7 +52,6 @@ class Database {
     public function getConnect() {
         return $this->db_conn;
     }
-}
-   
+}  
 ?>
 

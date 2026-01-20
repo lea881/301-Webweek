@@ -3,10 +3,7 @@ include_once '../classes/database.php';
 include_once '../classes/stage.php';
 include_once '../classes/lieu.php';
 
-
-// Syntaxe compatible array()
 $donnees = array();
-
 
 if (isset($_GET['recherche'])) {
     $db = database::getInstance('aikido');
@@ -20,14 +17,7 @@ if (isset($_GET['recherche'])) {
          $sql = "SELECT * FROM stage ORDER BY dateDebut";
     }
     
-
-
-    
-
-
-
     $stages = $db->getObjects($sql, 'Stage', array());
-
 
     //Si les dates de fin et de début sont les même on affiche "le ..." sinon "du... au..."
     if ($stages) {
@@ -38,11 +28,9 @@ if (isset($_GET['recherche'])) {
                 $dateAffiche = "Du " . $s->getDateDebut() . " au " . $s->getDateFin();
             }
 
-
             // Récupérer le lieu pour les stages
             $villes = $db->getObjects("SELECT * FROM lieu WHERE idLieu = " . $s->getIdLieu(), 'Lieu', array());
             $villeAffiche =  $villes[0]->getVille();
-
 
             $donnees['stages'][] = array(
                 "id"    => $s->getId(),
@@ -55,7 +43,6 @@ if (isset($_GET['recherche'])) {
         $donnees["status"] = "OK";
     }
 }
-
 
 echo json_encode($donnees);
 

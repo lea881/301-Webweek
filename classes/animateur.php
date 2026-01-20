@@ -14,7 +14,6 @@ class Animateur{
     public function getNiveauAnimateur(){ 
         return $this->niveauAnimateur;
     }
-
 }
 ?>
 
