@@ -1,10 +1,9 @@
-//J'initialise ma variable
+//J'initialise ma variable pour l'affichage de la liste des stages sur la page index
 //Elle commence à 3 car j'ai déjà afficher les 3 premiers stages
 let prochainStage = 3;
 
-
 //Je me suis basé sur le TP d'AJAX pour afficher
-//Fonction BOUTON VOIR PLUS
+//Fonction BOUTON VOIR PLUS page Index
 function listerStages(idStage){
     // requete AJAX
     let xhttp = new XMLHttpRequest();
@@ -24,7 +23,6 @@ function listerStages(idStage){
                   let rendered = Mustache.render(template, response);
                    // on met le contenu dans la div
                   document.getElementById('nouveauxStages').innerHTML += rendered;
-                 
                   // On décale de 3 les stages à afficher (pour ne pas réfficher les mêmes)
                   prochainStage = prochainStage + 3
               } else {
@@ -38,8 +36,15 @@ function listerStages(idStage){
 }
 
 
+// on ajoute un écouteur à cet élément
+function chargerStages() {
+    // On récupère la liste des stages en fonction de la variable prochainStage
+    listerStages(prochainStage);
+}
+
+
 //Je me suis basé sur le TP d'AJAX pour afficher
-//Fonction RECHERCHE
+//Fonction RECHERCHE pour la page STAGE CARTE
 function rechercherStages(valeur) {
     // requete AJAX
     let xhttp = new XMLHttpRequest();
@@ -64,18 +69,10 @@ function rechercherStages(valeur) {
 }
 
 
-// on ajoute un écouteur à cet élément
-function chargerStages() {
-    // On récupère la liste des stages en fonction de la variable prochainStage
-    listerStages(prochainStage);
-}
-
-
 function rechercheListener() {
     let saisie = this.value;
     let listePHP = document.getElementById('listeCompleteStages');
     let barreRecherche = document.getElementById('resultatsRecherche');
-
 
     //Si il a 1 caractère saisie dans la barre de recherche, on efface tout les stages afficher au départ (pour n'afficher que les stages de la recherche)
     if (saisie.length >= 1) {
@@ -88,6 +85,8 @@ function rechercheListener() {
         return;
     }
 }
+
+
 //CAROUSSEL PAGE ASSOC/GALERIE
 let grilleImages = [
     "../img/photo-noir-blanc-couteau.png",
@@ -95,13 +94,11 @@ let grilleImages = [
     "../img/photo-noir-blanc_prise-proche.png",
     "../img/photo-noir-blanc-main.png"
 ];
-
 let index = 0;
 // 2. Ta fonction de logique (elle ne s'exécute pas toute seule)
 function carrousel() {
     let imageElement = document.getElementById('imageAffiche');
     let boutonSuivant = document.getElementById('btnSuivant');
-    let boutonPrecedent = document.getElementById('btnPrecedent');
 
     // On vérifie si les éléments existent sur la page actuelle
     if (imageElement && boutonSuivant) {
@@ -120,21 +117,15 @@ function basculerMenu() {
     let bouton = document.getElementById('bouton');
     let menu = document.getElementById('menu');
 
-
-    // On verifier au clic pour changer le sens du V
-
-
-        //Verifier si le menu est deja visible, si oui on le cache, sinon on l'affiche
-        if (menu.style.display === "flex") {
-            menu.style.display = "none";
-            bouton.style.transform = "rotate(0deg)";
-        } else {
-            menu.style.display = "flex";
-            bouton.style.transform = "rotate(180deg)";
-        }
+    //Verifier si le menu est deja visible, si oui on le cache, sinon on l'affiche
+    if (menu.style.display === "flex") {
+        menu.style.display = "none";
+        bouton.style.transform = "rotate(0deg)";
+    } else {
+        menu.style.display = "flex";
+        bouton.style.transform = "rotate(180deg)";
+    }
 }
-
-
 
 
 function init() {
@@ -144,11 +135,9 @@ function init() {
     if (boutonStage) {
         boutonStage.addEventListener('click', chargerStages);
     }
-
-   
-
     // on recupere l'element inputRecherche et on ajoute l'écouteur pour faire une recherche
     let barre = document.getElementById('inputRecherche');
+    
     if (barre) {
         barre.addEventListener('input', rechercheListener);
     }

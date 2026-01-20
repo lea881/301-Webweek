@@ -1,5 +1,4 @@
-<?php
-    
+<?php 
     //Connexion à la BDD
     $host='localhost';
     $port='3306';
