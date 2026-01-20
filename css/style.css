@@ -852,6 +852,47 @@ main {
     transform: scale(1.03);
 }
 
+.btn-avis {
+    display: flex;
+    flex-direction: row;
+}
+
+.btn-supp, .btn-modif {
+    margin: 20px;
+}
+
+@media (max-width:768px) {
+    .stage-index{
+    display: grid;
+    grid-template-columns: repeat(1, 400px);
+    }
+
+    .avis-index {
+        display: grid;
+    grid-template-columns: repeat(1, 400px);
+    }
+
+    .prof{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .prof-gauche img {
+        width: 400px;
+        height: auto;
+    }
+
+    .assoc {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .assoc-gauche img {
+        width: 400px;
+        height: auto;
+    }
+}
+
 
 
 /* Responsive page cours */
