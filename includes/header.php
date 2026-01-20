@@ -20,7 +20,7 @@
   </div>
 
   <div class="menu-burger">
-    <h4 class="burger-icon" id="bouton"> V </h4>
+    <h4 id="bouton"> V </h4>
     <nav class="nav-burger" id="menu">
       <a href="<?php echo $path; ?>pages/stagecarte.php">Stage</a>
       <a href="<?php echo $path; ?>pages/cours.php">Cours</a>
