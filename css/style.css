@@ -92,8 +92,16 @@ p {
 
 /*FORMULAIRES CONTACT + MODIFIERAVIS + CONNEXION*/
 
+.section-formulaire-avis {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 form{
-    width:100%;
+    width:80%;
 }
 label{
     text-align: left;
@@ -122,7 +130,7 @@ button {
     gap: 10px;
 }
 
-.container-boutons {
+.container-bouton {
     display: flex;      
     justify-content: center;
     gap: 20px;
@@ -321,7 +329,7 @@ footer {
 
 /* PAGE HISTOIRE */
 .histoire {
-    width: 90%;
+    width: 100%;
     margin: auto;
 }
 
@@ -515,7 +523,7 @@ footer {
 
 /* S'nscrire */
 
-.btn-inscription {
+.btn{
     display: inline-block;
     margin: 40px auto;
     padding: 10px 20px;
@@ -620,40 +628,27 @@ footer {
     gap: 10px;
 }
 
-#listeCompleteStages a{
+.liste-stage a{
     text-decoration: none;
 }
 
 .resultat {
     display: grid;
     grid-template-columns: repeat(4, 300px);
-    width: 100%;
+    width: 80%;
     gap: 10px;
 }
 
 .resultat a {
     text-decoration: none;
 }
-@media (max-width: 768px){
-    .carte, .resultat {
-    grid-template-columns: repeat(1, 300px);
+@media (max-width: 768px) {
+    .liste-stage, .resultat {
+        display: grid;
+    grid-template-columns: repeat(1, 1fr);
     }
 }
-.cartestage{
-    background-color: lightgrey;
-    text-align: left;
-    width: 300px;
-    height: 400px;
-    align-content: end;
-    padding-left: 20px;
-} 
-.cartestage h3 {
-    text-align: left;
-    color: black;
-}
-.cartestage p {
-    color:#000;
-}
+
 /*Page association*/
 .titre-assoc{
     margin-top: 0;
@@ -707,6 +702,7 @@ footer {
 #btnSuivant {
   margin-top: 10px;
 }
+
 .video-aikido {
     display: flex;
     flex-wrap: wrap;
@@ -717,6 +713,18 @@ footer {
     width: 100%;
 }
 
+@media (max-width: 768px) {
+    .galerie_photoscouleur {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    }
+
+    .test-carrousel {
+  width: 80%;
+  max-width: 500px;   
+  height: auto;      
+}
+}
 
 /*PAGE ARTICLE STAGE*/
 
@@ -755,6 +763,10 @@ main.articlestage p{
 
 /*PAGE INDEX*/
 
+main {
+    width: 100%;
+}
+
 .prof, .assoc{
     display:flex;
     flex-direction : row;
@@ -763,6 +775,7 @@ main.articlestage p{
     gap : 5%;
     margin-left : 10%;
     margin-right : 10%;
+    margin-top : 3%;
 }
 
 .prof-droite, .assoc-gauche {
@@ -773,9 +786,56 @@ main.articlestage p{
     width:110%;
 }
 
-.prof h2{
+.prof h3{
     margin : 0;;
 }
+
+
+.banniere-index{
+    background-image: url('../img/301_banniere_couteau.png');
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction : column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+
+.banniere-index h1{
+    color:white;
+    margin : 0;
+}
+
+.stage-index {
+    display: grid;
+    grid-template-columns: repeat(3, 400px);
+    width: 80%;
+    gap: 30px;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.stage-index a {
+    text-decoration: none;
+}
+
+.avis-index {
+    display: grid;
+    grid-template-columns: repeat(3, 400px);
+    width: 80%;
+    gap: 30px;
+    margin-top: 20px;
+    justify-content: center;
+    height: 100%;
+}
+.avis {
+    display: flex;
+    flex-direction: column;
+}
+
+
 /* Responsive page cours */
 @media screen and (max-width: 768px) {
 .titre-cours {
@@ -826,17 +886,15 @@ main.articlestage p{
 
 .aikido-mots{
     height: 200px;
+    width: 100%;
     background-size: cover;
     background-position: center;
     text-align: center;
-    padding: 20px;
 }
 
 .titre-cours h1 {
     font-size: 22px;
 }
-
-
 
 .aikido-mots h2 {
     font-size: 50px;
