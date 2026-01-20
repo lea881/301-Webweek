@@ -836,10 +836,22 @@ main {
     justify-content: center;
     height: 100%;
 }
+
 .avis {
+    background-color: white; 
+    border: 1px solid #000;
+    padding: 30px 20px;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.3s ease; /* transition pour hover */
 }
+
+/* Hover */
+.avis:hover {
+    transform: scale(1.03);
+}
+
 
 
 /* Responsive page cours */

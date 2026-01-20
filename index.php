@@ -118,7 +118,7 @@ $avis = $db->getObjects("SELECT * FROM avis", 'Avis', []);
             <h2>Avis</h2>
             <div class="avis-index">
             <?php foreach ($avis as $unAvis) : ?>
-                <div class="carte" class="avis"> 
+                <div class="avis"> 
                     <h3><?php echo $unAvis->getNomAvis(). " ". $unAvis->getNoteAvis();?> /5 </h3>
                     <?php echo $unAvis->getTitreAvis(). "<br>". $unAvis->getDescriptionAvis();?>
                 
