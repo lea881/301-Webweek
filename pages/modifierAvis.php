@@ -15,6 +15,7 @@ $unAvis = $resultats[0];
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" href="img/logo.jpg">
     <title>Modifier Avis</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
