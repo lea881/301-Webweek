@@ -68,7 +68,7 @@ $stages = $db->getObjects("SELECT * FROM stage", 'Stage', []);
     <a href="articlestage.php?id={{id}}">
         <div class="carte">
             <img src="{{image}}" alt="Affiche" />
-            <h3> · {{nom}}</h3>
+            <h3>{{nom}}</h3>
             <p>{{date}}</p> 
             <p>{{ville}}</p>
         </div>
