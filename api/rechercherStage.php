@@ -47,7 +47,7 @@ if (isset($_GET['recherche'])) {
             $donnees['stages'][] = array(
                 "id"    => $s->getId(),
                 "nom"   => $s->getNom(),
-                "image" => $s->getImage(),
+                "image" => "../" .$s->getImage(),
                 "date"  => $dateAffiche,  
                 "ville" => $villeAffiche  
             );
