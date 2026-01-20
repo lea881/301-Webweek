@@ -56,7 +56,7 @@ $unAvis = $resultats[0];
         else {
             echo "Vous devez être connecté comme administrateur pour modifier ou supprimer un avis"; ?>
             <form action="connexion.php" method="POST">
-                <button type="submit" class="bouton">Se connecter</button>
+                <button type="submit" class="btn">Se connecter</button>
             </form>
             <?php } ?>
     </main>

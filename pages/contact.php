@@ -43,7 +43,7 @@ $prenom = $_POST['prenom'];
             <label for="message" class="titre">Message :</label><br>
             <textarea id="message" class="champ" name="message"></textarea><br><br>
 
-            <button type="submit" class="bouton" name="envoyer">Envoyer</button>
+            <button type="submit" class="btn" name="envoyer">Envoyer</button>
         </form>
     </main>
     <?php include '../includes/footer.php'; ?>
