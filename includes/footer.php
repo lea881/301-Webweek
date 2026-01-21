@@ -11,6 +11,7 @@
       <li><a href="../pages/cours.php">Cours</a></li>
       <li><a href="../pages/histoire.php">Histoire</a></li>
       <li><a href="../pages/stagecarte.php">Stage</a></li>
+      <li><a href="../pages/mentionslegales.php">Mentions légales</a></li>
     </ul>
   </nav>
   

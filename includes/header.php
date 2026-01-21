@@ -6,10 +6,10 @@
   </a>
 
   <nav class="menu-desktop">
-    <a href="<?php echo $path; ?>pages/stagecarte.php">Stage</a>
+    <a href="<?php echo $path; ?>pages/stagecarte.php">Stages</a>
     <a href="<?php echo $path; ?>pages/cours.php">Cours</a>
     <a href="<?php echo $path; ?>pages/association.php">Association</a>
-    <a href="<?php echo $path; ?>pages/histoire.php">Histoire</a>
+    <a href="<?php echo $path; ?>pages/histoire.php">Histoire du sport</a>
   </nav>
 
   <div class="header-droit-desktop">
