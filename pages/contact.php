@@ -26,7 +26,7 @@
     <main>
         <?php 
             if ($nom !=null && $prenom !=null){
-                echo "<h3> Merci pour votre message".$nom.  " ". $prenom . "</h3>" ;
+                echo "<h3> Merci pour votre message ".$nom.  " ". $prenom . "</h3>" ;
             }
         ?>
         <form action="#" method="post">
@@ -43,6 +43,8 @@
 
             <label for="message">Message :</label><br>
             <textarea id="message" class="champ" name="message"></textarea><br><br>
+
+            <input type="checkbox" required>J'accepte les <a href="mentionslegales.php"> mentions légales<br>
 
             <button type="submit" class="btn" name="envoyer">Envoyer</button>
         </form>
