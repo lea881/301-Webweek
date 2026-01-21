@@ -13,7 +13,7 @@
   </nav>
 
   <div class="header-droit-desktop">
-    <span class="phone">06-10-90-24-32</span>
+    <a href="tel:+33610902432" class="phone">06-10-90-24-32</a>
     <a href="<?php echo $path; ?>pages/contact.php" class="bouton">Contact</a>
     <a href="<?php echo $path; ?>pages/connexion.php" class="bouton">Connexion</a>
   </div>
@@ -25,7 +25,7 @@
       <a href="<?php echo $path; ?>pages/cours.php">Cours</a>
       <a href="<?php echo $path; ?>pages/association.php">Association</a>
       <a href="<?php echo $path; ?>pages/histoire.php">Histoire</a>
-      <span class="phone">06-10-90-24-32</span>
+      <a href="tel:+33610902432" class="phone">06-10-90-24-32</a>
       <a href="<?php echo $path; ?>pages/contact.php" class="bouton">Contact</a>
       <a href="<?php echo $path; ?>pages/connexion.php" class="bouton">Connexion</a>
     </nav>

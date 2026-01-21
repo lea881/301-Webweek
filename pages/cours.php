@@ -46,7 +46,7 @@
                 </div>
                 <div class="carte">
                     <div class="carte-header">
-                        <h2>Ados / Étudiants</h2>
+                        <h2>Tarif réduit</h2>
                     </div>
                     <div class="carte-body">
                         <p>170€</p>
